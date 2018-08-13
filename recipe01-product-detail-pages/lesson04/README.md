@@ -1,6 +1,6 @@
-# lesson02
+# lesson04
 
-The fundamentals of layout in Flutter. Container, Column and Row. Shows a nav bar and three colored bars, representing a simple, column based layout.
+Using models and mock data to populate your page.
 
 ## Requirements
 
