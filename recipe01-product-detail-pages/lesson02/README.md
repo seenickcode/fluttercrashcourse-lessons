@@ -1,6 +1,6 @@
 # lesson01
 
-Flutter in its absolute simplest form. Shows a blank screen with a nav bar.
+The fundamentals of layout in Flutter. Container, Column and Row. Shows a nav bar and three colored bars, representing a simple, column based layout.
 
 ## Requirements
 
