@@ -17,6 +17,10 @@ This lesson is one of many that will work towards one of our course recipes as w
 
 ## 1. Creating and running a basic app
 
+Remember, we're working towards a goal!
+
+![screenshot](lesson05-screenshot.png)
+
 - `flutter create`
 - `flutter run`
 - What happens when we run a Flutter project.
