@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class Styles {
   static const _textSizeLarge = 25.0;
   static final Color _textColorDefault = _hexToColor('333333');
+  static final String _fontNameDefault = 'Muli';
   static final textStyleHeaderPrimary = TextStyle(
+    fontFamily: _fontNameDefault,
     fontSize: _textSizeLarge,
     color: _textColorDefault,
   );

@@ -8,8 +8,6 @@ Styling text and adding images. Working with Dart Lists.
 1. Rendering an Image from a URL
 2. Controlling Content with Constraints
 3. Adding Style to Text
-4. Managing Style
-5. Pat Yourself on the Back!
 
 ## Lesson Requirements
 
@@ -39,14 +37,3 @@ This lesson is one of many that will work towards one of our course recipes as w
 - Add a `_sectionTitle` function that just renders a title. That way we can keep code re-usable.
 - Add a `_titleContainer` function. This way we can cleanly separate layout with our individual widget (our title). 
 - Note that later, this can be added to a separate file if it's used in more than one place.
-
-## 4. Mangaging Style
-
-- We can create a separate class for managing style or things get unwieldly for real projects!
-- `static`: ""static" means a member is available on the class itself instead of on instances of the class. That's all it means, and it isn't used for anything else."
-- `final`: "Once assigned a value, a final variable's value cannot be changed." It is "immutable".
-- `const`: a value defined at compile time. Immutable. ([Source](https://news.dartlang.org/2012/06/const-static-final-oh-my.html))
-
-## 4. Pat Yourself on the Back!
-
-We're done with this recipe! The screen is pretty simple but we've covered a ton of useful concepts and features of Flutter. 

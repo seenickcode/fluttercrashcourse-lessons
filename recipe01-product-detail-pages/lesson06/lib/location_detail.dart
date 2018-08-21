@@ -45,10 +45,7 @@ class LocationDetail extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.left,
-      style: TextStyle(
-        fontSize: 25.0,
-        color: Colors.black,
-      ),
+      style: Styles.TextStyleHeaderPrimary,
     );
   }
 
