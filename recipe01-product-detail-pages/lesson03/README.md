@@ -30,7 +30,6 @@ This lesson is one of many that will work towards one of our course recipes as w
 "Stateless widget are useful when the part of the user interface you are describing does not depend on anything other than the configuration information in the object itself and the BuildContext in which the widget is inflated. For compositions that can change dynamically, e.g. due to having an internal clock-driven state, or depending on some system state, consider using StatefulWidget."
 ([source](https://docs.flutter.io/flutter/widgets/StatelessWidget-class.html))
 
-
 Here's how you do this:
 
 ```
@@ -60,3 +59,9 @@ Now, what does the `context` parameter have to do with this? Well, when Widgets 
 **It's important to note that `build` can be called multiple times at any point when the app is running.**, as parts of the widget "tree" are rebuilt as needed. For example, if data is changed in one part of the tree, maybe based on some user interaction or something is fetched from a server somewhere, and that data needs to be reflected in a given Widget and any sub-Widgets, the `build` function is invoked to re-render.
 
 - Finish refactoring our code. 
+
+## 3. Reviewing our recipe goal.
+   
+Remember, we're working towards a goal!
+
+![screenshot](lesson05-screenshot.png)

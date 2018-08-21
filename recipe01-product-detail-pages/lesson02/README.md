@@ -34,3 +34,9 @@ This lesson is one of many that will work towards one of our course recipes as w
 - `Row` ([source](https://docs.flutter.io/flutter/material/Row-class.html))
 - `mainAxisAlignment`
 - `crossAxisAlignment`
+
+## 5. Reviewing our recipe goal.
+   
+Remember, we're working towards a goal!
+
+![screenshot](lesson05-screenshot.png)
