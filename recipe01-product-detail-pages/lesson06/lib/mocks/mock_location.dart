@@ -4,8 +4,9 @@ import '../models/location_fact.dart';
 class MockLocation {
   static Location fetchAny() {
     return Location(
-        name: 'Arashiyama Bamboo Grove, Kyoto, Japan',
-        url: 'https://goo.gl/Npy2K8',
+        name: 'Arashiyama Bamboo Grove',
+        url:
+            'http://everydaydreamholiday.com/wp-content/uploads/2013/01/Arashiyama-bamboo-grove-path_kyoto_japan.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',

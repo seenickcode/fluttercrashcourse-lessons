@@ -1,4 +1,4 @@
-# lesson05
+# lesson06
 
 Wrapping up our recipe! Styling text, NetworkImage and Dart Lists.
 Styling text and adding images. Working with Dart Lists.
@@ -7,7 +7,8 @@ Styling text and adding images. Working with Dart Lists.
 
 1. Managing Style
 2. Adding a Font
-3. Pat Yourself on the Back!
+3. A Note on Code Readability
+4. Pat Yourself on the Back!
 
 ## Lesson Requirements
 
@@ -31,6 +32,13 @@ This lesson is one of many that will work towards one of our course recipes as w
 - What is `pubspec.yml`, anyway?
 - Add the font name to `styles.dart`
 
-## 3. Pat Yourself on the Back!
+## 3. A Note on Code Readability
+
+- Having a naming convention for functions, not only style is important. It makes your code easier to read and organize.
+- Major areas of the screen are prefixed by `_render*`
+- Individual components are at the bottom of the class definition (i.e. `_sectionTitle`).
+- Individual components that have something in common should be prefixed by some consistent terminology (i.e. `_section*`).
+
+## 4. Pat Yourself on the Back!
 
 We're done with this recipe! The screen is pretty simple but we've covered a ton of useful concepts and features of Flutter. 

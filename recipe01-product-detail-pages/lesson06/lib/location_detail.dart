@@ -10,7 +10,7 @@ class LocationDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(location.name)),
+        appBar: AppBar(title: Text(location.name, style: Styles.navBarTitle)),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -29,30 +29,26 @@ class LocationDetail extends StatelessWidget {
   List<Widget> _renderFacts(BuildContext context, Location location) {
     var result = List<Widget>();
     for (int i = 0; i < location.facts.length; i++) {
-      result.add(_titleContainer(context, location.facts[i].title));
+      result.add(_sectionTitle(context, location.facts[i].title));
       result.add(_sectionText(context, location.facts[i].text));
     }
     return result;
   }
 
-  Widget _titleContainer(BuildContext context, String text) {
+  Widget _sectionTitle(BuildContext context, String text) {
     return Container(
         padding: EdgeInsets.fromLTRB(25.0, 25.0, 25.0, 10.0),
-        child: _sectionTitle(text));
-  }
-
-  Widget _sectionTitle(String text) {
-    return Text(
-      text,
-      textAlign: TextAlign.left,
-      style: Styles.TextStyleHeaderPrimary,
-    );
+        child: Text(
+          text,
+          textAlign: TextAlign.left,
+          style: Styles.headerLarge,
+        ));
   }
 
   Widget _sectionText(BuildContext context, String text) {
     return Container(
         padding: EdgeInsets.fromLTRB(25.0, 15.0, 25.0, 15.0),
-        child: Text(text));
+        child: Text(text, style: Styles.textDefault));
   }
 
   Widget _bannerImage(String url, double height) {
