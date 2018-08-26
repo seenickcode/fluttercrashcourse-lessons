@@ -1,7 +1,6 @@
 # lesson05
 
-Wrapping up our recipe! Styling text, NetworkImage and Dart Lists.
-Styling text and adding images. Working with Dart Lists.
+Working with Images. Controlling content using Container constraints.
 
 ## Lesson Goals
 

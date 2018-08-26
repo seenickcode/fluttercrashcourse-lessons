@@ -1,11 +1,9 @@
 # lesson06
 
-Wrapping up our recipe! Styling text, NetworkImage and Dart Lists.
-Styling text and adding images. Working with Dart Lists.
+Wrapping up our recipe! Managing Style and Adding Fonts
 
 ## Lesson Goals
 
 1. Managing Style
 2. Adding a Font
-3. A Note on Code Readability
-4. Pat Yourself on the Back!
+3. Pat Yourself on the Back!
