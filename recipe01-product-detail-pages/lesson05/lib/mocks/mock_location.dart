@@ -1,11 +1,12 @@
 import '../models/location.dart';
 import '../models/location_fact.dart';
 
-class MockLocation {
+class MockLocation extends Location {
   static Location fetchAny() {
     return Location(
-        name: 'Arashiyama Bamboo Grove, Kyoto, Japan',
-        url: 'https://goo.gl/Npy2K8',
+        name: 'Arashiyama Bamboo Grove',
+        url:
+            'https://cdn-images-1.medium.com/max/2000/1*vdJuSUKWl_SA9Lp-32ebnA.jpeg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',

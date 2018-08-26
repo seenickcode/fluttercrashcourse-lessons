@@ -6,7 +6,6 @@ void main() {
       appBar: AppBar(
         title: Text("Hello, World!"),
       ),
-      body: null,
     ),
   ));
 }

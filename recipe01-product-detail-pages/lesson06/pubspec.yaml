@@ -1,4 +1,4 @@
-name: lesson05
+name: lesson06
 description: A new Flutter project.
 
 dependencies:
@@ -45,7 +45,7 @@ flutter:
     - family: Muli
       fonts:
         - asset: assets/fonts/Muli-Light.ttf
-          weight: 300    
+          weight: 300
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

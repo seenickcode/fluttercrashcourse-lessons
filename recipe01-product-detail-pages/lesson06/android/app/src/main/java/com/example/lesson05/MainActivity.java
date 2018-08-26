@@ -1,4 +1,4 @@
-package com.example.lesson05;
+package com.example.lesson06;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

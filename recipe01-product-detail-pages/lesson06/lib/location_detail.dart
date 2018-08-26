@@ -14,11 +14,10 @@ class LocationDetail extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: _renderBody(context, this.location),
+          children: _renderBody(context, location),
         ));
   }
 
-  /// Renders a large image followed by a list of sections of text
   List<Widget> _renderBody(BuildContext context, Location location) {
     var result = List<Widget>();
     result.add(_bannerImage(location.url, 170.0));
@@ -29,23 +28,20 @@ class LocationDetail extends StatelessWidget {
   List<Widget> _renderFacts(BuildContext context, Location location) {
     var result = List<Widget>();
     for (int i = 0; i < location.facts.length; i++) {
-      result.add(_sectionTitle(context, location.facts[i].title));
-      result.add(_sectionText(context, location.facts[i].text));
+      result.add(_sectionTitle(location.facts[i].title));
+      result.add(_sectionText(location.facts[i].text));
     }
     return result;
   }
 
-  Widget _sectionTitle(BuildContext context, String text) {
+  Widget _sectionTitle(String text) {
     return Container(
         padding: EdgeInsets.fromLTRB(25.0, 25.0, 25.0, 10.0),
-        child: Text(
-          text,
-          textAlign: TextAlign.left,
-          style: Styles.headerLarge,
-        ));
+        child:
+            Text(text, textAlign: TextAlign.left, style: Styles.headerLarge));
   }
 
-  Widget _sectionText(BuildContext context, String text) {
+  Widget _sectionText(String text) {
     return Container(
         padding: EdgeInsets.fromLTRB(25.0, 15.0, 25.0, 15.0),
         child: Text(text, style: Styles.textDefault));
@@ -53,7 +49,8 @@ class LocationDetail extends StatelessWidget {
 
   Widget _bannerImage(String url, double height) {
     return Container(
-        constraints: BoxConstraints.tightFor(height: height),
-        child: Image.network(url, fit: BoxFit.fitWidth));
+      constraints: BoxConstraints.tightFor(height: height),
+      child: Image.network(url, fit: BoxFit.fitWidth),
+    );
   }
 }
