@@ -1,9 +1,3 @@
 # lesson07
 
-Wrapping up our recipe! Managing Style and Adding Fonts
-
-## Lesson Goals
-
-1. Managing Style
-2. Adding a Font
-3. Pat Yourself on the Back!
+See https://docs.google.com/document/d/1wbiXe81x1OWSqB-mSCWLOvIGngZpB3J6JAlD8CO6zyQ/edit#
