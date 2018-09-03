@@ -3,31 +3,31 @@ import 'models/location.dart';
 import 'styles.dart';
 
 class LocationList extends StatelessWidget {
-  final List<Location> items;
+  final List<Location> locations;
 
-  LocationList(this.items);
+  LocationList(this.locations);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Locations', style: Styles.navBarTitle)),
+      appBar: AppBar(title: Text("Locations", style: Styles.navBarTitle)),
       body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            contentPadding: EdgeInsets.all(10.0),
-            leading: _itemThumbnail(items[index]),
-            title: _itemTitle(items[index]),
-          );
-        },
-      ),
+          itemCount: this.locations.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              contentPadding: EdgeInsets.all(10.0),
+              leading: _itemThumbnail(this.locations[index]),
+              title: _itemTitle(this.locations[index]),
+            );
+          }),
     );
   }
 
   Widget _itemThumbnail(Location location) {
     return Container(
-        constraints: BoxConstraints.tightFor(width: 100.0),
-        child: Image.network(location.url, fit: BoxFit.fitWidth));
+      constraints: BoxConstraints.tightFor(width: 100.0),
+      child: Image.network(location.url, fit: BoxFit.fitWidth),
+    );
   }
 
   Widget _itemTitle(Location location) {
