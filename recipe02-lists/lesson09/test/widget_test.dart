@@ -10,19 +10,19 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:lesson09/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(new MyApp());
+//   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+//     // Build our app and trigger a frame.
+//     await tester.pumpWidget(new MyApp());
 
-    // await tester.drag(find.byType(ListView), const Offset(0.0, -250.0));
-    // await tester.pump();
+//     // await tester.drag(find.byType(ListView), const Offset(0.0, -250.0));
+//     // await tester.pump();
 
-    // expect(find.text('0'), findsNothing);
-    // expect(find.text('1'), findsOneWidget);
-    // expect(find.text('2'), findsOneWidget);
-    // expect(find.text('3'), findsOneWidget);
-    // expect(find.text('4'), findsOneWidget);
-    // expect(find.text('5'), findsNothing);
-    // expect(find.text('6'), findsNothing);
-  });
+//     // expect(find.text('0'), findsNothing);
+//     // expect(find.text('1'), findsOneWidget);
+//     // expect(find.text('2'), findsOneWidget);
+//     // expect(find.text('3'), findsOneWidget);
+//     // expect(find.text('4'), findsOneWidget);
+//     // expect(find.text('5'), findsNothing);
+//     // expect(find.text('6'), findsNothing);
+//   });
 }
