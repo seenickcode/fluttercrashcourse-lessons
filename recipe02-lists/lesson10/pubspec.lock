@@ -123,6 +123,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.3"
+  image_test_utils:
+    dependency: "direct dev"
+    description:
+      name: image_test_utils
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   io:
     dependency: transitive
     description:
@@ -180,7 +187,7 @@ packages:
     source: hosted
     version: "0.9.6+2"
   mockito:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: mockito
       url: "https://pub.dartlang.org"
@@ -388,4 +395,4 @@ packages:
     source: hosted
     version: "2.1.15"
 sdks:
-  dart: ">=2.0.0-dev.68.0 <3.0.0"
+  dart: ">=2.0.0 <3.0.0"
