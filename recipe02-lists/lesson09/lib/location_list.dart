@@ -20,17 +20,20 @@ class LocationList extends StatelessWidget {
   }
 
   Widget _listViewItemBuilder(BuildContext context, int index) {
+    var location = this.locations[index];
     return ListTile(
-      contentPadding: EdgeInsets.all(10.0),
-      leading: _itemThumbnail(this.locations[index]),
-      title: _itemTitle(this.locations[index]),
-      onTap: () => _navigateToLocationDetail(context, index),
-    );
+        contentPadding: EdgeInsets.all(10.0),
+        leading: _itemThumbnail(location),
+        title: _itemTitle(location),
+        onTap: () => _navigateToLocationDetail(context, index));
   }
 
   void _navigateToLocationDetail(BuildContext context, int locationID) {
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => LocationDetail(locationID)));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LocationDetail(locationID),
+        ));
   }
 
   Widget _itemThumbnail(Location location) {
