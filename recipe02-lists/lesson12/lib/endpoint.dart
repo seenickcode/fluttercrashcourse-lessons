@@ -7,13 +7,7 @@ class Endpoint {
   static const apiHost = 'fluttercrashcourse.com';
   static const prefix = '/api/v1';
 
-  static Uri uri(String path, Map<String, dynamic> queryParameters) {
-    const prefix = Endpoint.prefix;
-
-    if (queryParameters == null) {
-      queryParameters = new Map<String, dynamic>();
-    }
-
+  static Uri uri(String path, {Map<String, dynamic> queryParameters}) {
     final uri = new Uri(
       scheme: apiScheme,
       host: apiHost,
