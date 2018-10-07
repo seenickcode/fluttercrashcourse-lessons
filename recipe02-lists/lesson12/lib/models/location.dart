@@ -1,9 +1,10 @@
-import 'package:json_annotation/json_annotation.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../endpoint.dart';
+import 'package:json_annotation/json_annotation.dart';
 import './location_fact.dart';
+import '../endpoint.dart';
+
 part 'location.g.dart';
 
 @JsonSerializable()
@@ -12,7 +13,6 @@ class Location {
   final String name;
   final String url;
   final List<LocationFact> facts;
-
   Location({this.id, this.name, this.url, this.facts});
 
   factory Location.fromJson(Map<String, dynamic> json) =>
@@ -43,9 +43,5 @@ class Location {
     }
     final Map<String, dynamic> itemMap = json.decode(resp.body);
     return Location.fromJson(itemMap);
-  }
-
-  static Future<Location> fetchAny() async {
-    return Location.fetchByID(1);
   }
 }
