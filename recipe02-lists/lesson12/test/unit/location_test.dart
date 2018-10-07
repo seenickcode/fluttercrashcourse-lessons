@@ -7,7 +7,6 @@ void main() {
     for (var location in locations) {
       expect(location.name, hasLength(greaterThan(0)));
       expect(location.url, hasLength(greaterThan(0)));
-      expect(location.facts, hasLength(greaterThan(0)));
 
       final fetchedLocation = await Location.fetchByID(location.id);
       expect(fetchedLocation.name, equals(location.name));
