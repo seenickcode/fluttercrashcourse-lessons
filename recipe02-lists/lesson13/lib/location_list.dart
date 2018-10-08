@@ -30,9 +30,11 @@ class _LocationListState extends State<LocationList> {
 
   void _fetchLocations() async {
     final locations = await Location.fetchAll();
-    setState(() {
-      this.locations = locations;
-    });
+    if (this.mounted) {
+      setState(() {
+        this.locations = locations;
+      });
+    }
   }
 
   Widget _listViewItemBuilder(BuildContext context, int index) {
