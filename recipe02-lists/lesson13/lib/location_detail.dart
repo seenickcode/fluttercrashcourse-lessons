@@ -8,11 +8,11 @@ class LocationDetail extends StatefulWidget {
   LocationDetail(this.locationID);
 
   @override
-  _LocationDetailState createState() => _LocationDetailState(this.locationID);
+  createState() => _LocationDetailState(this.locationID);
 }
 
 class _LocationDetailState extends State<LocationDetail> {
-  int locationID;
+  final int locationID;
   Location location = Location.blank();
 
   _LocationDetailState(this.locationID);
@@ -20,7 +20,7 @@ class _LocationDetailState extends State<LocationDetail> {
   @override
   void initState() {
     super.initState();
-    _fetchLocation();
+    loadData();
   }
 
   @override
@@ -35,11 +35,12 @@ class _LocationDetailState extends State<LocationDetail> {
         )));
   }
 
-  void _fetchLocation() async {
-    final newLocation = await Location.fetchByID(this.locationID);
-    if (this.mounted) {
+  loadData() async {
+    final location = await Location.fetchByID(this.locationID);
+
+    if (mounted) {
       setState(() {
-        this.location = newLocation;
+        this.location = location;
       });
     }
   }
@@ -76,7 +77,9 @@ class _LocationDetailState extends State<LocationDetail> {
   Widget _bannerImage(String url, double height) {
     Image image;
     try {
-      image = Image.network(url, fit: BoxFit.fitWidth);
+      if (url.isNotEmpty) {
+        image = Image.network(url, fit: BoxFit.fitWidth);
+      }
     } catch (e) {
       print("could not load image $url");
     }

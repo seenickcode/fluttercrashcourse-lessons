@@ -5,7 +5,7 @@ import 'styles.dart';
 
 class LocationList extends StatefulWidget {
   @override
-  _LocationListState createState() => _LocationListState();
+  createState() => _LocationListState();
 }
 
 class _LocationListState extends State<LocationList> {
@@ -14,7 +14,7 @@ class _LocationListState extends State<LocationList> {
   @override
   void initState() {
     super.initState();
-    _fetchLocations();
+    loadData();
   }
 
   @override
@@ -28,7 +28,7 @@ class _LocationListState extends State<LocationList> {
     );
   }
 
-  void _fetchLocations() async {
+  loadData() async {
     final locations = await Location.fetchAll();
     setState(() {
       this.locations = locations;
@@ -36,11 +36,12 @@ class _LocationListState extends State<LocationList> {
   }
 
   Widget _listViewItemBuilder(BuildContext context, int index) {
+    final location = this.locations[index];
     return ListTile(
       contentPadding: EdgeInsets.all(10.0),
-      leading: _itemThumbnail(this.locations[index]),
-      title: _itemTitle(this.locations[index]),
-      onTap: () => _navigateToLocationDetail(context, this.locations[index].id),
+      leading: _itemThumbnail(location),
+      title: _itemTitle(location),
+      onTap: () => _navigateToLocationDetail(context, location.id),
     );
   }
 
