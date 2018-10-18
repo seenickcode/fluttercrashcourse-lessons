@@ -22,21 +22,17 @@ class _LocationListState extends State<LocationList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Locations", style: Styles.navBarTitle)),
-      body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            renderProgressBar(context),
-            Expanded(child: renderList(context)),
-          ]),
-    );
+        appBar: AppBar(title: Text("Locations", style: Styles.navBarTitle)),
+        body: Column(children: [
+          renderProgressBar(context),
+          Expanded(child: renderListView(context))
+        ]));
   }
 
   loadData() async {
     if (this.mounted) {
       setState(() => this.loading = true);
-      Timer(Duration(milliseconds: 5000), () async {
+      Timer(Duration(milliseconds: 8000), () async {
         final locations = await Location.fetchAll();
         setState(() {
           this.locations = locations;
@@ -55,7 +51,7 @@ class _LocationListState extends State<LocationList> {
         : Container());
   }
 
-  Widget renderList(BuildContext context) {
+  Widget renderListView(BuildContext context) {
     return ListView.builder(
       itemCount: this.locations.length,
       itemBuilder: _listViewItemBuilder,
