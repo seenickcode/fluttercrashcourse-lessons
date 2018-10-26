@@ -8,6 +8,8 @@ class Styles {
   static final Color _textColorStrong = _hexToColor('000000');
   static final Color _textColorDefault = _hexToColor('000000');
   static final Color _textColorFaint = _hexToColor('999999');
+  static final Color textColorBright = _hexToColor('FFFFFF');
+  static final Color accentColor = _hexToColor('FF0000');
   static final String _fontNameDefault = 'Muli';
   static final navBarTitle = TextStyle(
     fontFamily: _fontNameDefault,
@@ -31,12 +33,12 @@ class Styles {
   static final locationTileTitleDark = TextStyle(
     fontFamily: _fontNameDefault,
     fontSize: _textSizeLarge,
-    color: Colors.white,
+    color: textColorBright,
   );
   static final locationTileSubTitle = TextStyle(
     fontFamily: _fontNameDefault,
     fontSize: _textSizeDefault,
-    color: Colors.red,
+    color: accentColor,
   );
   static final locationTileCaption = TextStyle(
     fontFamily: _fontNameDefault,

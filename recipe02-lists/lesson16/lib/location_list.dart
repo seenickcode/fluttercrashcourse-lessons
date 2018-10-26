@@ -29,8 +29,8 @@ class _LocationListState extends State<LocationList> {
         body: RefreshIndicator(
             onRefresh: loadData,
             child: Column(children: [
-              renderProgressBar(context),
-              Expanded(child: renderListView(context))
+              _renderProgressBar(context),
+              Expanded(child: _renderListView(context))
             ])));
   }
 
@@ -52,7 +52,7 @@ class _LocationListState extends State<LocationList> {
         MaterialPageRoute(builder: (context) => LocationDetail(locationID)));
   }
 
-  Widget renderProgressBar(BuildContext context) {
+  Widget _renderProgressBar(BuildContext context) {
     return (this.loading
         ? LinearProgressIndicator(
             value: null,
@@ -61,7 +61,7 @@ class _LocationListState extends State<LocationList> {
         : Container());
   }
 
-  Widget renderListView(BuildContext context) {
+  Widget _renderListView(BuildContext context) {
     return ListView.builder(
       itemCount: this.locations.length,
       itemBuilder: _listViewItemBuilder,

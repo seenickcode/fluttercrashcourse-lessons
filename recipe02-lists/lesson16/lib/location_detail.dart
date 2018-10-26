@@ -5,6 +5,7 @@ import 'styles.dart';
 
 const BannerImageHeight = 300.0;
 const BodyVerticalPadding = 20.0;
+const FooterHeight = 100.0;
 
 class LocationDetail extends StatefulWidget {
   final int locationID;
@@ -31,12 +32,10 @@ class _LocationDetailState extends State<LocationDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text(location.name, style: Styles.navBarTitle)),
-        body: SingleChildScrollView(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: _renderBody(context, location),
-        )));
+        body: Stack(children: [
+          _renderBody(context, location),
+          _renderFooter(context, location),
+        ]));
   }
 
   loadData() async {
@@ -49,13 +48,41 @@ class _LocationDetailState extends State<LocationDetail> {
     }
   }
 
-  List<Widget> _renderBody(BuildContext context, Location location) {
+  Widget _renderBody(BuildContext context, Location location) {
     var result = List<Widget>();
     result.add(_bannerImage(location.url, BannerImageHeight));
     result.add(_renderHeader());
     result.addAll(_renderFacts(context, location));
-    result.add(_renderFooter());
-    return result;
+    result.add(_renderBottomSpacer());
+    return SingleChildScrollView(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: result));
+  }
+
+  Widget _renderFooter(BuildContext context, Location location) {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            decoration: BoxDecoration(color: Colors.white.withOpacity(0.5)),
+            height: FooterHeight,
+            child: Container(
+                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+                child: _renderBookButton()),
+          )
+        ]);
+  }
+
+  Widget _renderBookButton() {
+    return FlatButton(
+      color: Styles.accentColor,
+      textColor: Styles.textColorBright,
+      onPressed: () => print('press'),
+      child: Text('Book'.toUpperCase()),
+    );
   }
 
   Widget _renderHeader() {
@@ -90,11 +117,14 @@ class _LocationDetailState extends State<LocationDetail> {
         child: Text(text, style: Styles.textDefault));
   }
 
-  Widget _renderFooter() {
+  Widget _renderBottomSpacer() {
     return Container(
-      padding: EdgeInsets.symmetric(
-          vertical: BodyVerticalPadding,
-          horizontal: Styles.horizontalPaddingDefault),
+      padding: EdgeInsets.fromLTRB(
+        Styles.horizontalPaddingDefault,
+        BodyVerticalPadding,
+        Styles.horizontalPaddingDefault,
+        FooterHeight,
+      ),
     );
   }
 
