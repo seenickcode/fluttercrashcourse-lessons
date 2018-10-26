@@ -6,7 +6,6 @@ import 'location_detail.dart';
 import 'styles.dart';
 
 const ListItemHeight = 245.0;
-const ListItemOverlayHeight = 100.0;
 
 class LocationList extends StatefulWidget {
   @override
@@ -100,7 +99,6 @@ class _LocationListState extends State<LocationList> {
     final overlay = Container(
         padding: EdgeInsets.symmetric(
             vertical: 5.0, horizontal: Styles.horizontalPaddingDefault),
-        height: ListItemOverlayHeight,
         decoration: BoxDecoration(color: Colors.black.withOpacity(0.5)),
         child: info);
     return Column(

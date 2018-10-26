@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/location.dart';
 import '../styles.dart';
 
+const LocationTileHeight = 100.0;
+
 class LocationTile extends StatelessWidget {
   final Location location;
   final bool darkTheme;
@@ -15,6 +17,7 @@ class LocationTile extends StatelessWidget {
     final caption = location.tourPackageName.toUpperCase();
     return Container(
       padding: EdgeInsets.all(0.0),
+      height: LocationTileHeight,
       child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
