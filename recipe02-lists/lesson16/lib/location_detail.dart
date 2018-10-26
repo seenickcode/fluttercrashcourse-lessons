@@ -4,6 +4,7 @@ import 'components/location_tile.dart';
 import 'styles.dart';
 
 const BannerImageHeight = 300.0;
+const BodyVerticalPadding = 20.0;
 
 class LocationDetail extends StatefulWidget {
   final int locationID;
@@ -53,13 +54,15 @@ class _LocationDetailState extends State<LocationDetail> {
     result.add(_bannerImage(location.url, BannerImageHeight));
     result.add(_renderHeader());
     result.addAll(_renderFacts(context, location));
+    result.add(_renderFooter());
     return result;
   }
 
   Widget _renderHeader() {
     return Container(
         padding: EdgeInsets.symmetric(
-            vertical: 20.0, horizontal: Styles.horizontalPaddingDefault),
+            vertical: BodyVerticalPadding,
+            horizontal: Styles.horizontalPaddingDefault),
         child: LocationTile(location: location, darkTheme: false));
   }
 
@@ -85,6 +88,14 @@ class _LocationDetailState extends State<LocationDetail> {
         padding: EdgeInsets.symmetric(
             vertical: 10.0, horizontal: Styles.horizontalPaddingDefault),
         child: Text(text, style: Styles.textDefault));
+  }
+
+  Widget _renderFooter() {
+    return Container(
+      padding: EdgeInsets.symmetric(
+          vertical: BodyVerticalPadding,
+          horizontal: Styles.horizontalPaddingDefault),
+    );
   }
 
   Widget _bannerImage(String url, double height) {
