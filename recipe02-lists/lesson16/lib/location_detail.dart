@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'models/location.dart';
 import 'components/location_tile.dart';
 import 'styles.dart';
@@ -80,9 +81,18 @@ class _LocationDetailState extends State<LocationDetail> {
     return FlatButton(
       color: Styles.accentColor,
       textColor: Styles.textColorBright,
-      onPressed: () => print('press'),
+      onPressed: _handleBookPress,
       child: Text('Book'.toUpperCase()),
     );
+  }
+
+  void _handleBookPress() async {
+    const url = 'mailto:hello@tourism.co?subject=inquiry';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   Widget _renderHeader() {
