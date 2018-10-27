@@ -82,7 +82,7 @@ class _LocationDetailState extends State<LocationDetail> {
       color: Styles.accentColor,
       textColor: Styles.textColorBright,
       onPressed: _handleBookPress,
-      child: Text('Book'.toUpperCase()),
+      child: Text('Book'.toUpperCase(), style: Styles.textCTAButton),
     );
   }
 

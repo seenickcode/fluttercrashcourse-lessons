@@ -25,6 +25,11 @@ class Styles {
     color: _textColorDefault,
     height: 1.2,
   );
+  static final textCTAButton = TextStyle(
+    fontFamily: _fontNameDefault,
+    fontSize: _textSizeLarge,
+    color: textColorBright,
+  );
   static final locationTileTitleLight = TextStyle(
     fontFamily: _fontNameDefault,
     fontSize: _textSizeLarge,
