@@ -66,16 +66,15 @@ class _LocationListState extends State<LocationList> {
   Widget _listViewItemBuilder(BuildContext context, int index) {
     final location = this.locations[index];
     return GestureDetector(
-      onTap: () => _navigateToLocationDetail(context, location.id),
-      child:
-      Container(
-      height: ListItemHeight,
-      child: Stack(
-        children: [
-          _tileImage(location.url, MediaQuery.of(context).size.width, ListItemHeight),
-          _tileFooter(location),
-        ]),
-    ));
+        onTap: () => _navigateToLocationDetail(context, location.id),
+        child: Container(
+          height: ListItemHeight,
+          child: Stack(children: [
+            _tileImage(location.url, MediaQuery.of(context).size.width,
+                ListItemHeight),
+            _tileFooter(location),
+          ]),
+        ));
   }
 
   void _navigateToLocationDetail(BuildContext context, int locationID) {
@@ -99,7 +98,8 @@ class _LocationListState extends State<LocationList> {
   Widget _tileFooter(Location location) {
     final info = LocationTile(location: location, darkTheme: true);
     final overlay = Container(
-      padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: Styles.horizontalPaddingDefault),
+      padding: EdgeInsets.symmetric(
+          vertical: 5.0, horizontal: Styles.horizontalPaddingDefault),
       decoration: BoxDecoration(color: Colors.black.withOpacity(0.5)),
       child: info,
     );
