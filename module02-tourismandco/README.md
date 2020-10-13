@@ -1,7 +1,7 @@
-# Flutter for Junior Devs
+# The Tourism & Co. App
 
-A course module strictly for junior developers, specifically, developers that are familiar with some programming language but with less than a year of experience. 
-The goal is to ensure that developers...
+As a continuation of our initial course, we build out a realistic Flutter app, covering features used in almost any mobile app. 
+We cover concepts and features carefully and end to end, using Flutter a...
 
 1. [Super Simple Unit Tests](lesson07)
 2. [Sanity Checks with Integration Tests](lesson08)
