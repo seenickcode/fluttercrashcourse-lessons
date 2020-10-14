@@ -1,4 +1,4 @@
-# Lsson 3
+# Lesson 3
 
 Code organization, functions and creating your own StatelessWidgets. Shows a nav bar and three colored bars, representing a simple, column based layout.
 
@@ -7,3 +7,4 @@ Code organization, functions and creating your own StatelessWidgets. Shows a nav
 1. Implement a function.
 2. Refactor our code and create our own `StatelessWidget`
 
+[Video tutorial](https://fluttercrashcourse.com/courses/basics/lessons/stateless-widgets)
