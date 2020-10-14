@@ -8,5 +8,5 @@ A sampler course the gets you going with Flutter, covering text, images, layout,
 4. [Organizing Data with Models](lesson04)
 5. [Working with Images](lesson05)
 6. [Working with Lists](lesson06)
-7. [Managing Style and Adding Fonts](#)
-8. [Navigation and Handling Tap Events](#)
+7. [Managing Style and Adding Fonts](lesson07)
+8. [Navigation and Handling Tap Events](lesson08)
