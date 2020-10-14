@@ -1,4 +1,4 @@
-# lesson03
+# Lsson 3
 
 Code organization, functions and creating your own StatelessWidgets. Shows a nav bar and three colored bars, representing a simple, column based layout.
 
