@@ -1,16 +1,9 @@
-# lesson08
+# Lesson 8
 
-A new Flutter project.
+Handling tap events in Flutter with callbacks. Using Navigator and MaterialPageRoute to navigate to a new screen.
 
-## Getting Started
+## Lesson Goals
+1. Handling tap events with Callbacks
+2. Using Navigation and MaterialPageRoute
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Video tutorial](https://fluttercrashcourse.com/courses/basics/lessons/navigation-tap-events)
