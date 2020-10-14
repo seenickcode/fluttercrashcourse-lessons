@@ -1,4 +1,4 @@
-# lesson05
+# Lesson 5
 
 Working with Images. Controlling content using Container constraints.
 
