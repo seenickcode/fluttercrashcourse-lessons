@@ -1,4 +1,4 @@
-# lesson06
+# Lesson 6
 
 Wrapping up our recipe! Managing Style and Adding Fonts
 
