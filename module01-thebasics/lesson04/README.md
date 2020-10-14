@@ -2,6 +2,8 @@
 
 Using models and mock data to populate your page.
 
+![Screenshot](lesson05-screenshot.PNG)
+
 ## Lesson Goals
 
 1. Review our recipe goal. Discuss architecture.
