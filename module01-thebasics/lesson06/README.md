@@ -7,3 +7,5 @@ Wrapping up our recipe! Managing Style and Adding Fonts
 1. Managing Style
 2. Adding a Font
 3. Pat Yourself on the Back!
+
+[Video tutorial](https://fluttercrashcourse.com/courses/basics/lessons/lists-listview-listtile)
