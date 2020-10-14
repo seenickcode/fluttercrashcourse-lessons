@@ -8,3 +8,4 @@ Starting a simple Flutter app from absolute zero, covering essential concepts su
 
 1. Creating a blank screen with a navigation bar.
 
+[Video tutorial](https://fluttercrashcourse.com/courses/basics/lessons/materialapp-scaffold-appbar-text)
