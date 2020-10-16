@@ -20,7 +20,7 @@ class MockLocation extends Location {
     Location(
         name: 'Mount Fuji',
         url:
-            'https://exploreshizuoka.com/wp-content/uploads/sites/9/2018/03/Mount-Fuji-HEADERS19-6.jpg',
+            'https://pdd5k477ulx482prl3bm3by1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Mt-Fuji-Golf-Fairway.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
