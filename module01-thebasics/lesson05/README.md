@@ -2,6 +2,8 @@
 
 Working with Images. Controlling content using Container constraints.
 
+![Screenshot](lesson05-screenshot.PNG)
+
 ## Lesson Goals
 
 1. Rendering an Image from a URL

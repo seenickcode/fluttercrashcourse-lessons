@@ -2,6 +2,8 @@
 
 Code organization, functions and creating your own [StatelessWidgets](https://flutter.dev/docs/development/ui/widgets-intro#basic-widgets). Shows a nav bar and three colored bars, representing a simple, column based layout.
 
+![Screenshot](lesson05-screenshot.PNG)
+
 ## Lesson Goals
 
 1. Implement a function.
