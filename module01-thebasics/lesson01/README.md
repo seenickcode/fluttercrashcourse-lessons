@@ -1,11 +1,16 @@
-# Lesson 1
+# lesson01
 
-Starting a simple Flutter app from absolute zero, covering essential concepts such as MaterialApp, Scaffold, Text and AppBar.
+A new Flutter project.
 
-![Screenshot](lesson05-screenshot.PNG)
+## Getting Started
 
-## Lesson Goals
+This project is a starting point for a Flutter application.
 
-1. Creating a blank screen with a navigation bar.
+A few resources to get you started if this is your first Flutter project:
 
-[Video tutorial](https://fluttercrashcourse.com/courses/basics/lessons/materialapp-scaffold-appbar-text)
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
