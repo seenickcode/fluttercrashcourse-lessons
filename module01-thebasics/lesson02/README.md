@@ -1,12 +1,16 @@
-# Lesson 2
+# lesson02
 
-The fundamentals of layout in Flutter. Container, Column and Row. Shows a nav bar and three colored bars, representing a simple, column based layout.
+A new Flutter project.
 
-![Screenshot](lesson05-screenshot.PNG)
+## Getting Started
 
-## Lesson Goals
+This project is a starting point for a Flutter application.
 
-1. Add three colored boxes to the screen.
-2. Layout each box from top to bottom, with each item stretched.
+A few resources to get you started if this is your first Flutter project:
 
-[Video tutorial](https://fluttercrashcourse.com/courses/basics/lessons/container-layout-column-row)
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
