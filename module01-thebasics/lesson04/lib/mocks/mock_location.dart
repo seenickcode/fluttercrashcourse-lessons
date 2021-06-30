@@ -1,7 +1,7 @@
 import '../models/location.dart';
 import '../models/location_fact.dart';
 
-class MockLocation extends Location {
+mixin MockLocation implements Location {
   static Location FetchAny() {
     return Location(
         name: 'Arashiyama Bamboo Grove, Kyoto, Japan',
