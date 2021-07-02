@@ -1,7 +1,7 @@
 import '../models/location.dart';
 import '../models/location_fact.dart';
 
-class MockLocation extends Location {
+mixin MockLocation implements Location {
   static final List<Location> items = [
     Location(
         name: 'Arashiyama Bamboo Grove',
