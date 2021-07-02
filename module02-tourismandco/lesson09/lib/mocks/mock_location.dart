@@ -1,7 +1,7 @@
 import '../models/location.dart';
 import '../models/location_fact.dart';
 
-class MockLocation extends Location {
+mixin MockLocation implements Location {
   static final List<Location> items = [
     Location(
         name: 'Arashiyama Bamboo Grove',
@@ -20,66 +20,65 @@ class MockLocation extends Location {
     Location(
         name: 'Mount Fuji',
         url:
-            'https://pdd5k477ulx482prl3bm3by1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Mt-Fuji-Golf-Fairway.jpg',
+            'https://img3.goodfon.ru/original/1920x1080/a/a5/fuji-peizazh-iaponiia-gora-tsvety-nebo.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
               text:
-                  'Japan’s Mt. Fuji is an active volcano about 100 kilometers southwest of Tokyo. Commonly called “Fuji-san,” it’s the country’s tallest peak, at 3,776 meters. A pilgrimage site for centuries, it’s considered one of Japan’s 3 sacred mountains, and summit hikes remain a popular activity. Its iconic profile is the subject of numerous works of art, notably Edo Period prints by Hokusai and Hiroshige.'),
+                  'While we could go on about the ethereal glow and seemingly endless heights of this bamboo grove on the outskirts of Kyoto, the sight\'s pleasures extend beyond the visual realm'),
           LocationFact(
-              title: 'Did You Know',
+              title: 'How to Get There',
               text:
-                  'There are three cities that surround Mount Fuji: Gotemba, Fujiyoshida and Fujinomiya.')
+                  'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
     Location(
         name: 'Kiyomizu-dera',
         url:
-            'https://media4.trover.com/T/5a97b80c8beb7fbf57002ffe/fixedw_large_4x.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Kiyomizu-dera_in_Kyoto-r.jpg/800px-Kiyomizu-dera_in_Kyoto-r.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
               text:
-                  'Kiyomizu-dera, officially Otowa-san Kiyomizu-dera, is an independent Buddhist temple in eastern Kyoto. The temple is part of the Historic Monuments of Ancient Kyoto UNESCO World Heritage site.'),
+                  'While we could go on about the ethereal glow and seemingly endless heights of this bamboo grove on the outskirts of Kyoto, the sight\'s pleasures extend beyond the visual realm'),
           LocationFact(
-              title: 'Architectural Style',
-              text: 'Japanese Buddhist architecture')
+              title: 'How to Get There',
+              text:
+                  'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
     Location(
         name: 'Kinkaku-ji',
         url:
-            'https://cdn-images-1.medium.com/max/1600/1*sncLZ1eNLYk3s-v76nJn8w.jpeg',
+            'https://www.asisbiz.com/Japan/Kinkaku-ji/images/0-Postcards-Kinkaku-ji-Winter.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
               text:
-                  'Kinkaku-ji, officially named Rokuon-ji, is a Zen Buddhist temple in Kyoto, Japan. It is one of the most popular buildings in Japan, attracting a large number of visitors annually.'),
+                  'While we could go on about the ethereal glow and seemingly endless heights of this bamboo grove on the outskirts of Kyoto, the sight\'s pleasures extend beyond the visual realm'),
           LocationFact(
-              title: 'Did You Know',
+              title: 'How to Get There',
               text:
-                  'The Golden Pavilion is set in a magnificent Japanese strolling garden.')
+                  'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
     Location(
         name: 'Odaiba',
-        url:
-            'https://jp.openrice.com/userphoto/Article/0/1/0000CM2AF2F38CD85AB341j.jpg',
+        url: 'https://www.yhunter.ru/wp-content/uploads/2015/06/DSC1876.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
               text:
-                  'Accessed via the Rainbow Bridge or the futuristic Yurikamome train, Odaiba is a high-tech entertainment hub on an artificial island in Tokyo Bay. Visitors head to the beach at Seaside Park, enjoy Mt. Fuji views from the Daikanransha Ferris wheel, and interact with robots at the Miraikan science museum. Malls include Aqua City and the Venice-themed VenusFort, and there are sushi bars with views along the waterfront.'),
+                  'While we could go on about the ethereal glow and seemingly endless heights of this bamboo grove on the outskirts of Kyoto, the sight\'s pleasures extend beyond the visual realm'),
           LocationFact(
-              title: 'Did You Know',
+              title: 'How to Get There',
               text:
-                  'The pedestrian path begins a short walk from Shibaura-futo Station along the Yurikamome on the "Tokyo side" of the bridge, while Odaiba Kaihinkoen Station is the nearest station on the "Odaiba side."')
+                  'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
   ];
-
   static Location fetchAny() {
-    return MockLocation.items[0];
+    return items[0];
   }
 
   static List<Location> fetchAll() {
-    return MockLocation.items;
+    return items;
   }
 
   static Location fetch(int index) {
