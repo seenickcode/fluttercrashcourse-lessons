@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'models/location.dart';
 import 'location_detail.dart';
@@ -10,6 +11,7 @@ class LocationList extends StatefulWidget {
 
 class _LocationListState extends State<LocationList> {
   List<Location> locations = [];
+  bool loading = false;
 
   @override
   void initState() {
@@ -20,29 +22,48 @@ class _LocationListState extends State<LocationList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Locations", style: Styles.navBarTitle)),
-      body: ListView.builder(
-        itemCount: this.locations.length,
-        itemBuilder: _listViewItemBuilder,
-      ),
-    );
+        appBar: AppBar(title: Text("Locations", style: Styles.navBarTitle)),
+        body: Column(children: [
+          renderProgressBar(context),
+          Expanded(child: renderListView(context))
+        ]));
   }
 
   loadData() async {
-    final locations = await Location.fetchAll();
     if (this.mounted) {
-      setState(() {
-        this.locations = locations;
+      setState(() => this.loading = true);
+      Timer(Duration(milliseconds: 8000), () async {
+        final locations = await Location.fetchAll();
+        setState(() {
+          this.locations = locations;
+          this.loading = false;
+        });
       });
     }
+  }
+
+  Widget renderProgressBar(BuildContext context) {
+    return (this.loading
+        ? LinearProgressIndicator(
+            value: null,
+            backgroundColor: Colors.white,
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.grey))
+        : Container());
+  }
+
+  Widget renderListView(BuildContext context) {
+    return ListView.builder(
+      itemCount: this.locations.length,
+      itemBuilder: _listViewItemBuilder,
+    );
   }
 
   Widget _listViewItemBuilder(BuildContext context, int index) {
     final location = this.locations[index];
     return ListTile(
       contentPadding: EdgeInsets.all(10.0),
-      leading: _itemThumbnail(this.locations[index]),
-      title: _itemTitle(this.locations[index]),
+      leading: _itemThumbnail(location),
+      title: _itemTitle(location),
       onTap: () => _navigateToLocationDetail(context, location.id),
     );
   }
