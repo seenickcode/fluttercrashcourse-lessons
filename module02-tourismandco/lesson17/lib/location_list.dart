@@ -37,7 +37,7 @@ class _LocationListState extends State<LocationList> {
   Future<void> loadData() async {
     if (this.mounted) {
       setState(() => this.loading = true);
-      Timer(Duration(milliseconds: 3000), () async {
+      Timer(Duration(milliseconds: 8000), () async {
         final locations = await Location.fetchAll();
         setState(() {
           this.locations = locations;
@@ -83,16 +83,19 @@ class _LocationListState extends State<LocationList> {
   }
 
   Widget _tileImage(String url, double width, double height) {
-    Image image;
+    if (url.isEmpty) {
+      return Container();
+    }
+
     try {
-      image = Image.network(url, fit: BoxFit.cover);
+      return Container(
+        constraints: BoxConstraints.expand(),
+        child: Image.network(url, fit: BoxFit.cover),
+      );
     } catch (e) {
       print("could not load image $url");
+      return Container();
     }
-    return Container(
-      constraints: BoxConstraints.expand(),
-      child: image,
-    );
   }
 
   Widget _tileFooter(Location location) {

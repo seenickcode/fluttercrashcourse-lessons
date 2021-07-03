@@ -41,8 +41,8 @@ class _LocationListState extends State<LocationList> {
     final location = this.locations[index];
     return ListTile(
       contentPadding: EdgeInsets.all(10.0),
-      leading: _itemThumbnail(location),
-      title: _itemTitle(location),
+      leading: _itemThumbnail(this.locations[index]),
+      title: _itemTitle(this.locations[index]),
       onTap: () => _navigateToLocationDetail(context, location.id),
     );
   }
@@ -53,16 +53,19 @@ class _LocationListState extends State<LocationList> {
   }
 
   Widget _itemThumbnail(Location location) {
-    Image image;
+    if (location.url.isEmpty) {
+      return Container();
+    }
+
     try {
-      image = Image.network(location.url, fit: BoxFit.fitWidth);
+      return Container(
+        constraints: BoxConstraints.tightFor(height: 100.0),
+        child: Image.network(location.url, fit: BoxFit.fitWidth),
+      );
     } catch (e) {
       print("could not load image ${location.url}");
+      return Container();
     }
-    return Container(
-      constraints: BoxConstraints.tightFor(width: 100.0),
-      child: image,
-    );
   }
 
   Widget _itemTitle(Location location) {

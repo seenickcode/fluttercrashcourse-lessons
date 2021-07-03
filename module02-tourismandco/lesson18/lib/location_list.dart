@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'components/location_tile.dart';
 import 'components/banner_image.dart';
 import 'components/default_app_bar.dart';
-import 'components/location_tile.dart';
 import 'models/location.dart';
 import 'location_detail.dart';
 import 'styles.dart';

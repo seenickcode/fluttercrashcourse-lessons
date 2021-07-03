@@ -37,7 +37,7 @@ class _LocationListState extends State<LocationList> {
   Future<void> loadData() async {
     if (this.mounted) {
       setState(() => this.loading = true);
-      Timer(Duration(milliseconds: 3000), () async {
+      Timer(Duration(milliseconds: 8000), () async {
         final locations = await Location.fetchAll();
         setState(() {
           this.locations = locations;
@@ -66,16 +66,15 @@ class _LocationListState extends State<LocationList> {
   Widget _listViewItemBuilder(BuildContext context, int index) {
     final location = this.locations[index];
     return GestureDetector(
-      onTap: () => _navigateToLocationDetail(context, location.id),
-      child:
-      Container(
-      height: ListItemHeight,
-      child: Stack(
-        children: [
-          _tileImage(location.url, MediaQuery.of(context).size.width, ListItemHeight),
-          _tileFooter(location),
-        ]),
-    ));
+        onTap: () => _navigateToLocationDetail(context, location.id),
+        child: Container(
+          height: ListItemHeight,
+          child: Stack(children: [
+            _tileImage(location.url, MediaQuery.of(context).size.width,
+                ListItemHeight),
+            _tileFooter(location),
+          ]),
+        ));
   }
 
   void _navigateToLocationDetail(BuildContext context, int locationID) {
@@ -84,22 +83,26 @@ class _LocationListState extends State<LocationList> {
   }
 
   Widget _tileImage(String url, double width, double height) {
-    Image image;
+    if (url.isEmpty) {
+      return Container();
+    }
+
     try {
-      image = Image.network(url, fit: BoxFit.cover);
+      return Container(
+        constraints: BoxConstraints.expand(),
+        child: Image.network(url, fit: BoxFit.cover),
+      );
     } catch (e) {
       print("could not load image $url");
+      return Container();
     }
-    return Container(
-      constraints: BoxConstraints.expand(),
-      child: image,
-    );
   }
 
   Widget _tileFooter(Location location) {
     final info = LocationTile(location: location, darkTheme: true);
     final overlay = Container(
-      padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: Styles.horizontalPaddingDefault),
+      padding: EdgeInsets.symmetric(
+          vertical: 5.0, horizontal: Styles.horizontalPaddingDefault),
       decoration: BoxDecoration(color: Colors.black.withOpacity(0.5)),
       child: info,
     );

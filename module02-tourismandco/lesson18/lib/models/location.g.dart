@@ -8,23 +8,22 @@ part of 'location.dart';
 
 Location _$LocationFromJson(Map<String, dynamic> json) {
   return Location(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      url: json['url'] as String,
-      userItinerarySummary: json['userItinerarySummary'] as String,
-      tourPackageName: json['tourPackageName'] as String,
-      facts: (json['facts'] as List)
-          ?.map((e) => e == null
-              ? null
-              : LocationFact.fromJson(e as Map<String, dynamic>))
-          ?.toList());
+    id: json['id'] as int,
+    name: json['name'] as String,
+    url: json['url'] as String,
+    userItinerarySummary: json['user_itinerary_summary'] as String,
+    tourPackageName: json['tour_package_name'] as String,
+    facts: (json['facts'] as List<dynamic>?)
+        ?.map((e) => LocationFact.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
 }
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'url': instance.url,
-      'userItinerarySummary': instance.userItinerarySummary,
-      'tourPackageName': instance.tourPackageName,
-      'facts': instance.facts
+      'user_itinerary_summary': instance.userItinerarySummary,
+      'tour_package_name': instance.tourPackageName,
+      'facts': instance.facts,
     };

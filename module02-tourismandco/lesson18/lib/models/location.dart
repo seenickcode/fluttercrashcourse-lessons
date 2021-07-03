@@ -1,27 +1,27 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'dart:async';
-import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../endpoint.dart';
 import './location_fact.dart';
+import '../endpoint.dart';
+import 'dart:convert';
+
 part 'location.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 class Location {
   final int id;
   final String name;
   final String url;
   final String userItinerarySummary;
   final String tourPackageName;
-  final List<LocationFact> facts;
+  final List<LocationFact>? facts;
 
   Location(
-      {this.id,
-      this.name,
-      this.url,
-      this.userItinerarySummary,
-      this.tourPackageName,
-      this.facts});
+      {required this.id,
+      required this.name,
+      required this.url,
+      required this.userItinerarySummary,
+      required this.tourPackageName,
+      required this.facts});
 
   Location.blank()
       : id = 0,
@@ -35,14 +35,14 @@ class Location {
       _$LocationFromJson(json);
 
   static Future<List<Location>> fetchAll() async {
-    var uri = Endpoint.uri('/locations');
+    var uri = Endpoint.uri('/locations', queryParameters: {});
 
-    final resp = await http.get(uri.toString());
+    final resp = await http.get(uri);
 
     if (resp.statusCode != 200) {
       throw (resp.body);
     }
-    List<Location> list = new List<Location>();
+    List<Location> list = <Location>[];
     for (var jsonItem in json.decode(resp.body)) {
       list.add(Location.fromJson(jsonItem));
     }
@@ -50,18 +50,14 @@ class Location {
   }
 
   static Future<Location> fetchByID(int id) async {
-    var uri = Endpoint.uri('/locations/$id');
+    var uri = Endpoint.uri('/locations/$id', queryParameters: {});
 
-    final resp = await http.get(uri.toString());
+    final resp = await http.get(uri);
 
     if (resp.statusCode != 200) {
       throw (resp.body);
     }
     final Map<String, dynamic> itemMap = json.decode(resp.body);
     return Location.fromJson(itemMap);
-  }
-
-  static Future<Location> fetchAny() async {
-    return Location.fetchByID(1);
   }
 }

@@ -4,17 +4,16 @@ class Endpoint {
   // NOTE: not realistic! we'll configure environment-specific variables in a soon to be
   // upcoming lesson
   static const apiScheme = 'https';
-  static const apiHost = 'api.fluttercrashcourse.com';
+  static const apiHost = 'fluttercrashcourse.com';
   static const prefix = '/api/v1';
 
-  static Uri uri(String path, {Map<String, dynamic> queryParameters}) {
+  static Uri uri(String path, {required Map<String, dynamic> queryParameters}) {
     final uri = new Uri(
       scheme: apiScheme,
       host: apiHost,
       path: '$prefix$path',
       queryParameters: queryParameters,
     );
-    print('${uri.toString()}');
     return uri;
   }
 }

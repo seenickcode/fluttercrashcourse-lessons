@@ -2,8 +2,8 @@ import 'package:test/test.dart';
 import '../../lib/mocks/mock_location.dart';
 
 void main() {
-  test('test fetchAny', () {
-    final mockLocation = MockLocation.fetchAny();
+  test('test fetchAny', () async {
+    final mockLocation = MockLocation.fetchAll().first;
     expect(mockLocation, isNotNull);
     expect(mockLocation.name, isNotEmpty);
   });

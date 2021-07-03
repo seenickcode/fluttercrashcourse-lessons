@@ -1,9 +1,10 @@
 import '../models/location.dart';
 import '../models/location_fact.dart';
 
-class MockLocation extends Location {
+mixin MockLocation implements Location {
   static final List<Location> items = [
     Location(
+        id: 1,
         name: 'Arashiyama Bamboo Grove',
         url:
             'https://cdn-images-1.medium.com/max/2000/1*vdJuSUKWl_SA9Lp-32ebnA.jpeg',
@@ -18,6 +19,7 @@ class MockLocation extends Location {
                   'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
     Location(
+        id: 2,
         name: 'Mount Fuji',
         url:
             'https://pdd5k477ulx482prl3bm3by1-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Mt-Fuji-Golf-Fairway.jpg',
@@ -32,6 +34,7 @@ class MockLocation extends Location {
                   'There are three cities that surround Mount Fuji: Gotemba, Fujiyoshida and Fujinomiya.')
         ]),
     Location(
+        id: 3,
         name: 'Kiyomizu-dera',
         url:
             'https://media4.trover.com/T/5a97b80c8beb7fbf57002ffe/fixedw_large_4x.jpg',
@@ -45,6 +48,7 @@ class MockLocation extends Location {
               text: 'Japanese Buddhist architecture')
         ]),
     Location(
+        id: 4,
         name: 'Kinkaku-ji',
         url:
             'https://cdn-images-1.medium.com/max/1600/1*sncLZ1eNLYk3s-v76nJn8w.jpeg',
@@ -59,6 +63,7 @@ class MockLocation extends Location {
                   'The Golden Pavilion is set in a magnificent Japanese strolling garden.')
         ]),
     Location(
+        id: 5,
         name: 'Odaiba',
         url:
             'https://jp.openrice.com/userphoto/Article/0/1/0000CM2AF2F38CD85AB341j.jpg',

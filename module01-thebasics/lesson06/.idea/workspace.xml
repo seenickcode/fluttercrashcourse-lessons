@@ -1,123 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="cb10cef1-6a62-4691-a5d5-42efd913517a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lesson07/.metadata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/java/com/example/lesson05/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/android/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/assets/fonts/Muli-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/AppDelegate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/AppDelegate.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/ios/Runner/main.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lesson05-screenshot.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lesson07.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lib/location_detail.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lib/main.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lib/mocks/mock_location.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lib/models/location.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lib/models/location_fact.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/lib/styles.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson07/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson06.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson06.iml" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson07" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1238" y="280" key="FileChooserDialogImpl" timestamp="1602703416493">
-      <screen x="0" y="0" width="1920" height="1036" />
-    </state>
-    <state x="1238" y="280" key="FileChooserDialogImpl/0.0.1920.1036@0.0.1920.1036" timestamp="1602703416493" />
-    <state width="654" height="178" key="GridCell.Tab.0.bottom" timestamp="1602703416502">
-      <screen x="0" y="0" width="1920" height="1036" />
-    </state>
-    <state width="654" height="178" key="GridCell.Tab.0.bottom/0.0.1920.1036@0.0.1920.1036" timestamp="1602703416502" />
-    <state width="654" height="178" key="GridCell.Tab.0.center" timestamp="1602703416502">
-      <screen x="0" y="0" width="1920" height="1036" />
-    </state>
-    <state width="654" height="178" key="GridCell.Tab.0.center/0.0.1920.1036@0.0.1920.1036" timestamp="1602703416502" />
-    <state width="654" height="178" key="GridCell.Tab.0.left" timestamp="1602703416502">
-      <screen x="0" y="0" width="1920" height="1036" />
-    </state>
-    <state width="654" height="178" key="GridCell.Tab.0.left/0.0.1920.1036@0.0.1920.1036" timestamp="1602703416502" />
-    <state width="654" height="178" key="GridCell.Tab.0.right" timestamp="1602703416502">
-      <screen x="0" y="0" width="1920" height="1036" />
-    </state>
-    <state width="654" height="178" key="GridCell.Tab.0.right/0.0.1920.1036@0.0.1920.1036" timestamp="1602703416502" />
   </component>
 </project>

@@ -46,17 +46,17 @@ class _LocationDetailState extends State<LocationDetail> {
   }
 
   List<Widget> _renderBody(BuildContext context, Location location) {
-    var result = List<Widget>();
+    var result = <Widget>[];
     result.add(_bannerImage(location.url, 170.0));
     result.addAll(_renderFacts(context, location));
     return result;
   }
 
   List<Widget> _renderFacts(BuildContext context, Location location) {
-    var result = List<Widget>();
-    for (int i = 0; i < location.facts.length; i++) {
-      result.add(_sectionTitle(location.facts[i].title));
-      result.add(_sectionText(location.facts[i].text));
+    var result = <Widget>[];
+    for (int i = 0; i < (location.facts ?? []).length; i++) {
+      result.add(_sectionTitle(location.facts![i].title));
+      result.add(_sectionText(location.facts![i].text));
     }
     return result;
   }
@@ -75,17 +75,18 @@ class _LocationDetailState extends State<LocationDetail> {
   }
 
   Widget _bannerImage(String url, double height) {
-    Image image;
+    if (url.isEmpty) {
+      return Container();
+    }
+
     try {
-      if (url.isNotEmpty) {
-        image = Image.network(url, fit: BoxFit.fitWidth);
-      }
+      return Container(
+        constraints: BoxConstraints.tightFor(height: height),
+        child: Image.network(url, fit: BoxFit.fitWidth),
+      );
     } catch (e) {
       print("could not load image $url");
+      return Container();
     }
-    return Container(
-      constraints: BoxConstraints.tightFor(height: height),
-      child: image,
-    );
   }
 }

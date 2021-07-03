@@ -1,9 +1,6 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:lesson08/location_detail.dart';
+import 'location_detail.dart';
 import 'styles.dart';
-
 import 'models/location.dart';
 
 class LocationList extends StatelessWidget {
@@ -21,8 +18,8 @@ class LocationList extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-          itemCount: this._locations.length,
-          itemBuilder: _listViewItemBuilder,
+        itemCount: this._locations.length,
+        itemBuilder: _listViewItemBuilder,
       ),
     );
   }
