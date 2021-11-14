@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
-import 'login_options.dart';
+import '../../components/sc_flat_button.dart';
+import '/screens/login_options/login_options.dart';
 
 class Intro extends StatelessWidget {
   static const String routeName = '/intro';
 
-  Widget build(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
-        decoration: BoxDecoration(color: Colors.white),
-        width: MediaQuery.of(context).size.width, // TODO better way?
-        height: MediaQuery.of(context).size.height, // TODO better way?
-        child: Stack(children: [Text("intro")]));
-  }
+  const Intro({Key? key}) : super(key: key);
 
-  // PageView _imagePager() {
-  //   List<Image> images = <Image>[];
-  //   for (var i = 0; i < 5; i++) {
-  //     images.add(Image.asset(
-  //       'assets/images/iphone-valprop-$i@3x.png',
-  //       fit: BoxFit.cover,
-  //       alignment: Alignment.center,
-  //     ));
-  //   }
-  //   return PageView(
-  //       scrollDirection: Axis.horizontal,
-  //       reverse: false,
-  //       onPageChanged: (int page) {},
-  //       children: images);
-  // }
+  @override
+  Widget build(BuildContext context) {
+    return Stack(children: [
+      PageView(
+          scrollDirection: Axis.horizontal,
+          children: Iterable<int>.generate(5)
+              .map((i) => Image.asset(
+                    "assets/images/iphone-valprop-$i@3x.png",
+                    fit: BoxFit.cover,
+                    alignment: Alignment.center,
+                  ))
+              .toList()),
+      Positioned(
+          width: MediaQuery.of(context).size.width,
+          height: 60.0,
+          bottom: 50.0,
+          child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: SCFlatButton(const Text("Get Started"),
+                  onTap: () =>
+                      Navigator.pushNamed(context, LoginOptions.routeName))))
+    ]);
+  }
 }

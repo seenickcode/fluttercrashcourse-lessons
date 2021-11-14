@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '/screens/cal_pager/cal_pager.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
