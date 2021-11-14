@@ -6,6 +6,9 @@ import '/config/styles.dart';
 class LoginOptions extends StatelessWidget {
   static const String routeName = '/intro/login_options';
 
+  const LoginOptions({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(children: [
