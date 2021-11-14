@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lesson01/screens/cal_pager/cal_pager.dart';
+import 'package:lesson01/screens/splash/splash.dart';
 import '/components/sc_image_button.dart';
 import '/components/sc_flat_button.dart';
 import '/config/styles.dart';
@@ -28,16 +30,17 @@ class LoginOptions extends StatelessWidget {
           child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: SCFlatButton(
-                SCImageButton('assets/images/google-logo-9808.png',
+                const SCImageButton('assets/images/google-logo-9808.png',
                     'Continue with Google'),
                 textColor: Styles.primaryTextColor,
                 backgroundColor: Colors.white,
-                onTap: () => _signupTapped,
+                onTap: () => _signupTapped(context),
               )))
     ]));
   }
 
   Future _signupTapped(BuildContext context) async {
-    // TODO in the next lesson!
+    // NOTE we're simulating login here for now
+    Navigator.of(context).pushNamed(CalPager.routeName);
   }
 }

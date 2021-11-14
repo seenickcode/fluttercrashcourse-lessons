@@ -1,11 +1,3 @@
-import 'dart:collection';
-
-const String PersistSessionStringKey = 'persistedSessionString';
-
-String appWebsite = 'https://steadycalendar.com';
-
-String appSupportEmail = 'hello@steadycalendar.com?subject=Feedback';
-
 String baseBackgroundImageURL(String supabaseProjectID) =>
     "https://$supabaseProjectID.supabase.in/storage/v1/object/public/backgrounds";
 

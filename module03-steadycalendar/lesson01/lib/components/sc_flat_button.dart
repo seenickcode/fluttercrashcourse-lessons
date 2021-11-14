@@ -7,8 +7,11 @@ class SCFlatButton extends StatelessWidget {
   final Color? textColor;
   final Color? backgroundColor;
 
-  SCFlatButton(this.child, {this.textColor, this.backgroundColor, this.onTap});
+  const SCFlatButton(this.child,
+      {Key? key, this.textColor, this.backgroundColor, this.onTap})
+      : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -19,7 +22,7 @@ class SCFlatButton extends StatelessWidget {
                 fontFamily: Styles.primaryFontRegular,
                 fontWeight: Styles.primaryFontWeightLight,
                 fontSize: Styles.primaryButtonFontSize),
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5.0)))),
         child: child,
         onPressed: onTap);
