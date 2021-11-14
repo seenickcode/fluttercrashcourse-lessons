@@ -90,3 +90,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Muli
+      fonts:
+        - asset: assets/fonts/Muli.ttf
+        - asset: assets/fonts/Muli-ExtraLight.ttf
+          weight: 100
+        - asset: assets/fonts/Muli-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Muli-SemiBold.ttf
+          weight: 700
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand-Regular.otf
