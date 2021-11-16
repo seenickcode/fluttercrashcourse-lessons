@@ -12,13 +12,13 @@ class Intro extends StatelessWidget {
     return Stack(children: [
       PageView(
           scrollDirection: Axis.horizontal,
-          children: Iterable<int>.generate(5)
-              .map((i) => Image.asset(
+          children: List.generate(
+              5,
+              (i) => Image.asset(
                     "assets/images/iphone-valprop-$i@3x.png",
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
-                  ))
-              .toList()),
+                  ))),
       Positioned(
           width: MediaQuery.of(context).size.width,
           height: 60.0,
