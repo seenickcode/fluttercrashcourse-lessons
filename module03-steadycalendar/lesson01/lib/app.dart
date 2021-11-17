@@ -5,6 +5,8 @@ import '/screens/intro/intro.dart';
 import '/screens/login_options/login_options.dart';
 
 class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,11 +17,6 @@ class App extends StatelessWidget {
         CalPager.routeName: (context) => const CalPager(),
         Intro.routeName: (context) => const Intro(),
         LoginOptions.routeName: (context) => const LoginOptions(),
-        // CalList.routeName: (context) => CalList(),
-        // CalEdit.routeName: (context) => CalEdit(),
-        // CalBGPicker.routeName: (context) => CalBGPicker(),
-        // CalColorPicker.routeName: (context) => CalColorPicker(),
-        // Menu.routeName: (context) => Menu()
       },
     );
   }

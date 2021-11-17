@@ -29,12 +29,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_dotenv: ^4.0.0-nullsafety.1
   cached_network_image: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_dotenv: ^4.0.0-nullsafety.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
