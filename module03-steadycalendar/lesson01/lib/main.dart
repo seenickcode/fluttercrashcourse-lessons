@@ -7,5 +7,5 @@ void main() async {
 
   await load(fileName: '.env');
 
-  runApp(App());
+  runApp(const App());
 }
