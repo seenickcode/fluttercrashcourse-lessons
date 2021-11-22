@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart' as flutter;
+import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '/screens/splash/splash.dart';
 import 'app.dart';
 
 void main() async {
-  flutter.WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
   await load(fileName: '.env');
 
@@ -14,5 +13,5 @@ void main() async {
       anonKey: env['SUPABASE_ANON_KEY']!,
       debug: false);
 
-  flutter.runApp(App(SplashState()));
+  runApp(const App());
 }

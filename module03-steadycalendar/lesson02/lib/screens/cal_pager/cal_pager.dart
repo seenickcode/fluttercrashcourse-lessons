@@ -1,7 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:lesson02/config/constants.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'background.dart';
 
 class CalPager extends StatelessWidget {
   const CalPager({Key? key}) : super(key: key);
@@ -11,22 +10,30 @@ class CalPager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: PageView(
+        body: Stack(
+      children: [
+        PageView(
             children: [
-      'adventures-begin-mug@3x.png',
-      'apple-and-juice@3x.png',
-      'apples-on-tree@3x.png'
-    ]
-                .map((name) => CachedNetworkImage(
-                      imageUrl:
-                          "${baseBackgroundImageURL(env['SUPABASE_PROJECT_ID']!)}/$name",
-                      fit: BoxFit.cover,
-                      alignment: Alignment.center,
-                      placeholder: (context, url) =>
-                          const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) =>
-                          const Icon(Icons.error),
-                    ))
-                .toList()));
+          'adventures-begin-mug@3x.png',
+          'apple-and-juice@3x.png',
+          'apples-on-tree@3x.png'
+        ].map((name) => Background(name)).toList()),
+        (Supabase.instance.client.auth.currentUser != null
+            ? Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                    Text(Supabase.instance.client.auth.currentUser!.id),
+                    TextButton(onPressed: _logOut, child: const Text("Log Out"))
+                  ]))
+            : Container())
+      ],
+    ));
+  }
+
+  _logOut() async {
+    await Supabase.instance.client.auth.signOut();
+    // NOTE splash.dart will handle navigation when it handles auth updates
   }
 }

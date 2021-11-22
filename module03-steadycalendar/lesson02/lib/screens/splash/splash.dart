@@ -5,9 +5,7 @@ import '/screens/cal_pager/cal_pager.dart';
 import '/screens/intro/intro.dart';
 
 class Splash extends StatefulWidget {
-  final State<Splash> state;
-
-  const Splash(this.state, {Key? key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   static const routeName = '/';
 

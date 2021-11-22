@@ -5,9 +5,7 @@ import '/screens/intro/intro.dart';
 import '/screens/login_options/login_options.dart';
 
 class App extends StatelessWidget {
-  final State<Splash> splashState;
-
-  const App(this.splashState, {Key? key}) : super(key: key);
+  const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,7 @@ class App extends StatelessWidget {
       title: 'Steady Calendar',
       initialRoute: Splash.routeName,
       routes: {
-        Splash.routeName: (context) => Splash(splashState),
+        Splash.routeName: (context) => const Splash(),
         CalPager.routeName: (context) => const CalPager(),
         Intro.routeName: (context) => const Intro(),
         LoginOptions.routeName: (context) => const LoginOptions(),
