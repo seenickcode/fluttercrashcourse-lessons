@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:gotrue/gotrue.dart' as gotrue;
 import '/screens/cal_pager/cal_pager.dart';
 import '/screens/intro/intro.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
-
   static const routeName = '/';
+
+  const Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> createState() => SplashState();
@@ -34,13 +33,13 @@ class SplashState extends SupabaseAuthState<Splash> {
   }
 
   @override
-  void onAuthenticated(gotrue.Session session) async {
+  void onAuthenticated(Session session) async {
     Navigator.of(context).pushNamedAndRemoveUntil(
         CalPager.routeName, ModalRoute.withName(Splash.routeName));
   }
 
   @override
-  void onPasswordRecovery(gotrue.Session session) {}
+  void onPasswordRecovery(Session session) {}
 
   @override
   void onErrorAuthenticating(String message) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:gotrue/gotrue.dart' as gotrue;
 import '/components/sc_image_button.dart';
 import '/components/sc_flat_button.dart';
 import '/config/styles.dart';
@@ -42,9 +41,7 @@ class LoginOptions extends StatelessWidget {
 
   Future _signupTapped(BuildContext context) async {
     // this will trigger one of our AuthState hooks
-    await Supabase.instance.client.auth.signInWithProvider(
-        gotrue.Provider.google,
-        options:
-            gotrue.AuthOptions(redirectTo: env['SUPABASE_AUTH_CALLBACK']!));
+    await Supabase.instance.client.auth.signInWithProvider(Provider.google,
+        options: AuthOptions(redirectTo: env['SUPABASE_AUTH_CALLBACK']!));
   }
 }

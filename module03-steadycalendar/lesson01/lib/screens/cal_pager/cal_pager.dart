@@ -4,9 +4,9 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:lesson01/config/constants.dart';
 
 class CalPager extends StatelessWidget {
-  const CalPager({Key? key}) : super(key: key);
-
   static const String routeName = '/cal_pager';
+
+  const CalPager({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
