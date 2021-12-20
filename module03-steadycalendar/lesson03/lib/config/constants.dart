@@ -1,3 +1,5 @@
+import '/models/calendar_color.dart';
+
 String baseBackgroundImageURL(String supabaseProjectID) =>
     "https://$supabaseProjectID.supabase.in/storage/v1/object/public/backgrounds";
 
@@ -160,4 +162,17 @@ List<String> backgrounds = [
   'working-with-clay@3x.png',
   'writing-girl@3x.png',
   'yogurt-musli-blueberries@3x.png'
+];
+
+List<CalendarColor> colors = [
+  CalendarColor('49A9B3', 'Harmony'),
+  CalendarColor('357496', 'Inspiration'),
+  CalendarColor('469781', 'Relaxation'),
+  CalendarColor('F0604E', 'Excitement'),
+  CalendarColor('A39551', 'Sunlight'),
+  CalendarColor('AD6385', 'Freedom'),
+  CalendarColor('7B7A7C', 'Strength'),
+  CalendarColor('77457A', 'Determination'),
+  CalendarColor('BB3567', 'Excellence'),
+  CalendarColor('346B63', 'Earth')
 ];

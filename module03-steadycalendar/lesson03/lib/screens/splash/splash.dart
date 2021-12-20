@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '/screens/cal_pager/cal_pager.dart';
+import 'package:provider/provider.dart' as provider;
+import '/providers/session.dart';
 import '/screens/intro/intro.dart';
 
 class Splash extends StatefulWidget {
@@ -34,6 +36,9 @@ class SplashState extends SupabaseAuthState<Splash> {
 
   @override
   void onAuthenticated(Session session) async {
+    provider.Provider.of<SessionProvider>(context, listen: false)
+        .refreshCalendars();
+
     Navigator.of(context).pushNamedAndRemoveUntil(
         CalPager.routeName, ModalRoute.withName(Splash.routeName));
   }
