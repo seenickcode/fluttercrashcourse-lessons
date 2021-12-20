@@ -19,7 +19,7 @@ class CalPager extends StatelessWidget {
           (Supabase.instance.client.auth.currentUser != null
               ? Center(
                   child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                       Text(Supabase.instance.client.auth.currentUser!.id),
