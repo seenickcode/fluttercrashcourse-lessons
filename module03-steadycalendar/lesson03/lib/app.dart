@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
-import '/screens/splash/splash.dart';
-import '/screens/cal_pager/cal_pager.dart';
-import '/screens/intro/intro.dart';
-import '/screens/login_options/login_options.dart';
 import 'package:flutter/material.dart' as flutter;
+import 'package:flutter/material.dart';
+import 'package:lesson03/repositories/cal_repo_interface.dart';
+import '/screens/splash/splash.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:provider/provider.dart';
-import '/repositories/cal_repo_interface.dart';
 import '/repositories/cal_repo.dart';
-import '/providers/session.dart';
+import '/providers/session_provider.dart';
+import '/screens/cal_pager/cal_pager.dart';
+import '/screens/intro/intro.dart';
+import '/screens/login_options/login_options.dart';
 
 class App extends StatelessWidget {
   final State<Splash> splashState;
@@ -22,7 +22,7 @@ class App extends StatelessWidget {
       title: 'Steady Calendar',
       initialRoute: Splash.routeName,
       routes: {
-        Splash.routeName: (context) => const Splash(),
+        Splash.routeName: (context) => Splash(splashState),
         CalPager.routeName: (context) => const CalPager(),
         Intro.routeName: (context) => const Intro(),
         LoginOptions.routeName: (context) => const LoginOptions(),

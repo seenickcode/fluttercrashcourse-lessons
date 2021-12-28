@@ -44,3 +44,5 @@ CREATE POLICY user_access_own_calendar_dates ON calendar_dates
 
 -- calendar_dates indices
 CREATE UNIQUE INDEX calendar_dates_calendar_id_date ON calendar_dates (calendar_id, date);
+
+
