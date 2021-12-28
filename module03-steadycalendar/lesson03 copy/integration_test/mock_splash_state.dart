@@ -1,38 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:lesson03/providers/session.dart';
-import 'package:lesson03/screens/cal_pager/cal_pager.dart';
-import 'package:lesson03/screens/intro/intro.dart';
-import 'package:lesson03/screens/splash/splash.dart';
+import 'package:lesson03/screens/splash/splash_state.dart';
 
-class MockSplashState extends State<Splash> {
+class MockSplashState extends SplashState {
   MockSplashState();
 
+  // we override this to avoid calling Supabase or any external dependency
   @override
   void initState() {
     super.initState();
 
-    // NOTE trick to wait for state to be ready
+    // we call logout explicity as 'onUnauthenticated' won't ever be invoked
     Future.delayed(Duration.zero, () async {
-      // simulate a supabase state without any session
-      Navigator.of(context).pushNamedAndRemoveUntil(
-          Intro.routeName, ModalRoute.withName(Splash.routeName));
+      logout(context);
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: CircularProgressIndicator()),
-    );
-  }
-
-  login() async {
-    if (mounted) {
-      Provider.of<SessionProvider>(context, listen: false).refreshCalendars();
-
-      Navigator.of(context).pushNamedAndRemoveUntil(
-          CalPager.routeName, ModalRoute.withName(Splash.routeName));
-    }
   }
 }

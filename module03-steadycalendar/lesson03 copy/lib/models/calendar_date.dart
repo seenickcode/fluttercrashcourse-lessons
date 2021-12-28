@@ -1,7 +1,6 @@
 import 'package:intl/intl.dart';
 import 'dart:collection';
 
-// NOTE DateTime represents a day, so will always have a zero value for time parts
 typedef CalendarDate = DateTime;
 
 typedef CalendarDates = HashMap<int, CalendarDate>;

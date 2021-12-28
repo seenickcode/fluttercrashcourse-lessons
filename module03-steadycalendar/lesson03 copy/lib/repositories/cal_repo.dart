@@ -1,10 +1,10 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '/models/calendar.dart';
+import 'package:lesson03/models/calendar.dart';
 import 'cal_repo_interface.dart';
 
 class CalendarRepository implements CalRepoInterface {
   const CalendarRepository();
-
+  
   @override
   Future<List<Calendar>> refreshCalendars() async {
     final resp = await Supabase.instance.client

@@ -14,22 +14,17 @@ void main() {
     testWidgets('login and edit calendars', (WidgetTester tester) async {
       final calRepo = MockCalendarRepository();
       final splashState = MockSplashState();
-
+      
       await runAppWithOptions(
-          envFileName: testEnvFile,
-          calendarRepository: calRepo,
-          splashState: splashState);
+          envFileName: testEnvFile, calendarRepository: calRepo, splashState: splashState);
       await tester.pumpAndSettle();
-
-      // await splashState.logout();
-      // await tester.pumpAndSettle();
 
       final getStarted = find.widgetWithText(ElevatedButton, 'Get Started');
       await tester.tap(getStarted);
       await tester.pumpAndSettle();
 
-      // NOTE basically, at the moment, GestureDetector is the only widget we 
-      // want to tap on this page, so find a less brittle way to do this
+            // find our login button
+
       expect(find.byType(GestureDetector), findsWidgets);
 
       await splashState.login();

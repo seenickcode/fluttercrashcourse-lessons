@@ -1,4 +1,4 @@
-import '/models/calendar_color.dart';
+import 'package:lesson03/models/calendar_color.dart';
 
 String baseBackgroundImageURL(String supabaseProjectID) =>
     "https://$supabaseProjectID.supabase.in/storage/v1/object/public/backgrounds";

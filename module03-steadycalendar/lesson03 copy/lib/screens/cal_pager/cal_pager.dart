@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:provider/provider.dart';
-import '/providers/session.dart';
+import '/providers/session_provider.dart';
 import '/screens/cal_pager/cal_view/cal_view.dart';
 
 class CalPager extends StatelessWidget {

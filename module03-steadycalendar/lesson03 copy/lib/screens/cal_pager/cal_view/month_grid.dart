@@ -58,7 +58,7 @@ class _MonthGridState extends State<MonthGrid> {
             DateFormat.E(locale).format(date)[0],
       ),
       selectedDayPredicate: (day) =>
-          widget.cal.dates!.containsKey(day.hashCode),
+          (widget.cal.dates != null && widget.cal.dates!.containsKey(day.hashCode)),
     );
   }
 

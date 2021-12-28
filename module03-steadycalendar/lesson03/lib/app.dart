@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart' as flutter;
 import 'package:flutter/material.dart';
 import 'package:lesson03/repositories/cal_repo_interface.dart';
 import '/screens/splash/splash.dart';
@@ -32,11 +31,10 @@ class App extends StatelessWidget {
 }
 
 /// Performs initialization steps and then runs our app.
-Future<void> runAppWithOptions(
-    {String envFileName = '.env',
-    CalRepoInterface calendarRepository = const CalendarRepository(),
-    required State<Splash> splashState}) async {
-  flutter.WidgetsFlutterBinding.ensureInitialized();
+Future<void> runAppWithOptions({String envFileName = '.env',
+CalRepoInterface calendarRepository = const CalendarRepository(), 
+  required State<Splash> splashState}) async {
+  WidgetsFlutterBinding.ensureInitialized();
 
   await load(fileName: envFileName);
 
@@ -45,7 +43,8 @@ Future<void> runAppWithOptions(
       anonKey: env['SUPABASE_ANON_KEY']!,
       debug: false);
 
-  flutter.runApp(ChangeNotifierProvider(
+  runApp(ChangeNotifierProvider(
       create: (context) => SessionProvider(calendarRepository),
       child: App(splashState)));
 }
+
