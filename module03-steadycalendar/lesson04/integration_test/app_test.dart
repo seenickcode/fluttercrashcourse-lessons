@@ -30,7 +30,7 @@ void main() {
       await splashState.login();
       await tester.pumpAndSettle();
 
-       // ensure first cal appears with name at the top
+      // ensure first cal appears with name at the top
       expect(find.text(calRepo.cals.first.name), findsWidgets);
       await tester.pumpAndSettle();
 

@@ -9,15 +9,13 @@ class SCNavBar extends StatelessWidget {
   final bool isModal;
   final List<Widget> rightActions;
 
-  // TODO this should really be inherited from AppBar and Scaffold should be
-  // removed below
-  SCNavBar(
-      {required this.title,
+  const SCNavBar(
+      {Key? key, required this.title,
       this.child,
-      this.showBack: true,
+      this.showBack = true,
       this.backTap,
-      this.isModal: false,
-      this.rightActions: const []});
+      this.isModal = false,
+      this.rightActions = const []}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +24,13 @@ class SCNavBar extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // brightness: Brightness.light,
-        title: Text(this.title),
+        title: Text(title),
         centerTitle: true,
         leading: (showBack
             ? Container(
-                padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
                 child: SCNavBarImageButton(
-                  iconFilename: (this.isModal
+                  iconFilename: (isModal
                       ? 'assets/icons/icons8-delete-100.png'
                       : 'assets/icons/icons8-back-96.png'),
                   onTap: () => (backTap != null
@@ -40,12 +38,11 @@ class SCNavBar extends StatelessWidget {
                       : Navigator.of(context).pop()),
                 ))
             : Container()),
-        // textTheme: TextTheme(headline6: Styles.navBarTextStyle),
         backgroundColor: Colors.white,
         elevation: (ios ? 0.0 : 4.0),
-        actions: this.rightActions,
+        actions: rightActions,
       ),
-      body: this.child,
+      body: child,
     );
   }
 }

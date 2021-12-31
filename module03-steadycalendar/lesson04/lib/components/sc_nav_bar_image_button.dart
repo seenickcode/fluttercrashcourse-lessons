@@ -8,18 +8,18 @@ class SCNavBarImageButton extends StatelessWidget {
   final double tapAreaWidth;
   final double tapAreaHeight;
 
-  SCNavBarImageButton(
-      {required this.iconFilename,
+  const SCNavBarImageButton(
+      {Key? key, required this.iconFilename,
       this.onTap,
-      this.width: 35.0,
-      this.height: 35.0,
-      this.tapAreaWidth: 60.0,
-      this.tapAreaHeight: 60.0});
+      this.width = 35.0,
+      this.height = 35.0,
+      this.tapAreaWidth = 60.0,
+      this.tapAreaHeight = 60.0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final lrPad = (this.tapAreaWidth - this.width) / 2;
-    final tbPad = (this.tapAreaHeight - this.height) / 2;
+    final lrPad = (tapAreaWidth - width) / 2;
+    final tbPad = (tapAreaHeight - height) / 2;
 
     return GestureDetector(
         onTap: onTap,
@@ -31,13 +31,13 @@ class SCNavBarImageButton extends StatelessWidget {
                 // ),
                 child: Container(
                     constraints: BoxConstraints.tightFor(
-                      width: this.width,
-                      height: this.height,
+                      width: width,
+                      height: height,
                     ),
                     decoration: BoxDecoration(
                         // color: Colors.blue,
-                        image: new DecorationImage(
-                      image: new AssetImage(iconFilename),
+                        image: DecorationImage(
+                      image: AssetImage(iconFilename),
                       fit: BoxFit.contain,
                     ))))));
   }

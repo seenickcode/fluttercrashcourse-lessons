@@ -30,7 +30,7 @@ class LoginOptions extends StatelessWidget {
           child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: SCFlatButton(
-                SCImageButton('assets/images/google-logo-9808.png',
+                const SCImageButton('assets/images/google-logo-9808.png',
                     'Continue with Google'),
                 textColor: Styles.primaryTextColor,
                 backgroundColor: Colors.white,

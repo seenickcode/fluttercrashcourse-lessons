@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:lesson04/util/alert.dart';
 import '/models/calendar.dart';
 import 'package:table_calendar/table_calendar.dart';
-import '/config/styles.dart';
-import '/util/alert.dart';
 import '/util/colors.dart';
-import '/models/calendar_date.dart';
+import '/config/styles.dart';
 import 'package:intl/intl.dart';
 
-final kNow = DateTime.now();
-final kFirstDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
-final kLastDay = DateTime(kNow.year, kNow.month, kNow.day);
+final now = DateTime.now();
+final firstDay = DateTime(now.year, now.month - 3, now.day);
+final lastDay = DateTime(now.year, now.month, now.day);
 
 class MonthGrid extends StatefulWidget {
   final Calendar cal;
@@ -27,8 +26,8 @@ class _MonthGridState extends State<MonthGrid> {
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
-      firstDay: kFirstDay,
-      lastDay: kLastDay,
+      firstDay: firstDay,
+      lastDay: lastDay,
       calendarStyle: CalendarStyle(
         todayTextStyle:
             _defaultTextStyle(color: hexToColor(widget.cal.colorHex)),

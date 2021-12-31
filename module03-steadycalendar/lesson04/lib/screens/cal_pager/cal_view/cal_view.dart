@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lesson04/providers/session_provider.dart';
+import 'package:lesson04/util/alert.dart';
+import 'package:provider/provider.dart';
 import '/models/calendar.dart';
 import '/config/styles.dart';
 import 'background.dart';
 import 'month_grid.dart';
-import 'package:provider/provider.dart';
-import '/providers/session_provider.dart';
-import '/util/alert.dart';
 
 class CalView extends StatelessWidget {
   final Calendar cal;
@@ -26,7 +26,6 @@ class CalView extends StatelessWidget {
       )),
       Container(
           padding: const EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
-          // decoration: BoxDecoration(color: Colors.red),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
