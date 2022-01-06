@@ -41,7 +41,7 @@ mixin MockLocation implements Location {
         id: 3,
         name: 'Kiyomizu-dera',
         url:
-            'https://media4.trover.com/T/5a97b80c8beb7fbf57002ffe/fixedw_large_4x.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/3/3c/Kiyomizu.jpg',
         facts: <LocationFact>[
           LocationFact(
               title: 'Summary',
