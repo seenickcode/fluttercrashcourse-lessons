@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+A clear and concise description of what the bug is. [This article](https://stackoverflow.com/help/minimal-reproducible-example) provides a great overview on how best to describe the problem and provide a reproducible example.
 
 **To Reproduce**
 Steps to reproduce the behavior:
