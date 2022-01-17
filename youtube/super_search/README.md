@@ -6,6 +6,8 @@ A full stack Flutter example from [](https://fluttercrashcourse.com) and [](http
 - Supabase full text search.
 - Simple theming.
 
+![Demo](demo.gif)
+
 ## Target Audience
 
 Flutter engineers with an intermediate skill level.
