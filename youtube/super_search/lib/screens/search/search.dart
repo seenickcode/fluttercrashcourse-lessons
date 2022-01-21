@@ -59,22 +59,20 @@ class _SearchState extends State<Search> {
   /// Handles user entering text into the search field. We kick off a search for
   /// every letter typed.
   _onSearchFieldChanged(String value) async {
-    _input = value;
-
-    if (value.isEmpty) {
-      setState(() => _results = null);
-    }
-
-    final results = await _searchUsers(value);
-
     setState(() {
-      _results = results;
+      _input = value;
       if (value.isEmpty) {
         // null is a sentinal value that allows us more control the UI
         // for a better user experience. instead of showing 'No results for ''",
         // if this is null, it will just show nothing
         _results = null;
       }
+    });
+
+    final results = await _searchUsers(value);
+
+    setState(() {
+      _results = results;
     });
   }
 
