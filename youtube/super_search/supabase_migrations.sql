@@ -1,20 +1,19 @@
--- create a table called 'names'
-create table names (
+-- create our table, containing a list of names (effectively "users")
+CREATE TABLE names (
   id serial primary key,
   fname text,
   lname text
 );
 
--- the 'fts' column we add here stands for 'full text search'
--- source: https://supabase.com/docs/guides/database/full-text-search#search-using-the-new-column
-alter table 
+-- add an additional column called 'fts' (full text search)
+-- which will contain the values "<first name> <last name>", allowing
+-- us to query against it using a special full text search query
+-- you'll see in the next step
+-- BONUS READ: https://supabase.com/docs/guides/database/full-text-search
+ALTER TABLE
   names 
-add column 
+ADD COLUMN
   fts tsvector generated always as (to_tsvector('english', fname || ' ' || lname)) stored;
   
-create index name_fts on names using gin (fts); -- generate the index
-
--- NOTE: see 'supabase_query_examples.sql' to see how fast our search will be by setting up the index above
-
--- NOTE: we assume that you'll import the 'supabase_test_fixtures.csv' file via a SQL client
--- such as TablePlus, etc
+-- create an index so we can quickly query by our new column, 'fts'
+CREATE INDEX name_fts ON names USING gin (fts);

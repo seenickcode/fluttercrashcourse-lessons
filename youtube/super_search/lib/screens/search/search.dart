@@ -11,8 +11,6 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  // an optional type as this will control the three states to our search results
-  // section below: default search state, 'no results', results
   List<String>? _results;
   String _input = '';
 
@@ -24,21 +22,22 @@ class _SearchState extends State<Search> {
         ),
         body: Column(children: [
           Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TextFormField(
-                  style: Theme.of(context).textTheme.bodyText1,
-                  onChanged: _onSearchFieldChanged,
-                  autocorrect: false,
-                  autofocus: true,
-                  decoration: InputDecoration(
-                    hintText: "Name",
-                    hintStyle: placeholderTextFieldStyle,
-                    border: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    enabledBorder: InputBorder.none,
-                    errorBorder: InputBorder.none,
-                    disabledBorder: InputBorder.none,
-                  ))),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: TextFormField(
+                style: Theme.of(context).textTheme.bodyText1,
+                onChanged: _onSearchFieldChanged,
+                autocorrect: false,
+                autofocus: true,
+                decoration: InputDecoration(
+                  hintText: "Name",
+                  hintStyle: placeholderTextFieldStyle,
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  enabledBorder: InputBorder.none,
+                  errorBorder: InputBorder.none,
+                  disabledBorder: InputBorder.none,
+                )),
+          ),
           Expanded(
               child: (_results ?? []).isNotEmpty
                   ? GridView.count(
