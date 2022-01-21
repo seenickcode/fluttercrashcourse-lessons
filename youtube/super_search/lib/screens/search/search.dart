@@ -14,7 +14,7 @@ class _SearchState extends State<Search> {
   // an optional type as this will control the three states to our search results
   // section below: default search state, 'no results', results
   List<String>? _results;
-  late String _input;
+  String _input = '';
 
   @override
   Widget build(BuildContext context) {
@@ -98,15 +98,14 @@ class _SearchState extends State<Search> {
     // WARNING: we aren't doing proper error handling here,
     // as this is an example but typically we'd handle any exceptions via the
     // callee of this function
+    // NOTE: this seaches our 'fts' (full text search column)
+    // NOTE: 'limit()' will improve the performance of the call as well.
+    // normally, we'd use a proper backend search index that would provide
+    // us with the most relevant results, vs simply using a wildcard match
     final result = await Supabase.instance.client
         .from('names')
         .select('fname, lname')
-        .textSearch(
-            'fts', "$name:*") // seaches our 'fts' (full text search column)
-        // it's not very helpful to the user to have to sift through too many results.
-        // this will improve the performance of the call as well.
-        // normally, we'd use a proper backend search index that would provide
-        // us with the most relevant results, vs simply using a wildcard match
+        .textSearch('fts', "$name:*")
         .limit(100)
         .execute();
 
@@ -122,6 +121,8 @@ class _SearchState extends State<Search> {
     final List<String> names = [];
 
     // convert results into a list here
+    // 'result.data' is a list of Maps, where each map represents a returned
+    // row in our database. each key of the map represents a table column
     for (var v in ((result.data ?? []) as List<dynamic>)) {
       // NOTE: string formatting over many items can be a tad resource intensive
       // but since this is across a limited set of results, it should be fine.
