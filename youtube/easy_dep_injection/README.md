@@ -10,36 +10,7 @@ These steps are a continuation of this [lesson](https://github.com/seenickcode/f
 
 ## How to Run These Integration Tests
 
-1. `flutter test --dart-define="ENV=test" integration_test`
-2. We changed this code:
-
-```dart
-// main.dart
-// ...
-
-runApp(const App(UserRepo()));
-
-// ...
-```
-
-with this code:
-
-```dart
-// main.dart
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-// ...
-
-runApp(const ProviderScope(child: App()));
-
-// ...
-```
-
-3. remove dep injection
-4. add service
-
-5. run with `flutter run --dart-define="ENV=test"`
-6. run tests with
+1. `flutter test integration_test`
 
 ## Questions?
 
@@ -54,5 +25,3 @@ Issues? Open a bug report [here](https://github.com/seenickcode/fluttercrashcour
 Flutter engineers with an intermediate skill level.
 
 ## Resources
-
-- []()

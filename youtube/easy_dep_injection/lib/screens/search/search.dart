@@ -1,4 +1,6 @@
-import 'package:easy_dep_injection/services/user.dart';
+import 'package:easy_dep_injection/app.dart';
+import 'package:easy_dep_injection/app_config.dart';
+import 'package:easy_dep_injection/repositories/user_repo_interface.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_dep_injection/screens/search/tile.dart';
 import 'package:easy_dep_injection/style.dart';
@@ -28,7 +30,7 @@ class _SearchState extends State<Search> {
             child: TextFormField(
                 key: const Key(Search.nameFieldKey),
                 style: Theme.of(context).textTheme.bodyText1,
-                onChanged: _onSearchFieldChanged,
+                onChanged: (val) => _onSearchFieldChanged(context, val),
                 autocorrect: false,
                 autofocus: true,
                 decoration: InputDecoration(
@@ -61,7 +63,7 @@ class _SearchState extends State<Search> {
 
   /// Handles user entering text into the search field. We kick off a search for
   /// every letter typed.
-  _onSearchFieldChanged(String value) async {
+  _onSearchFieldChanged(BuildContext context, String value) async {
     setState(() {
       _input = value;
       if (value.isEmpty) {
@@ -72,7 +74,8 @@ class _SearchState extends State<Search> {
       }
     });
 
-    final results = await UserService.instance.repo.searchUsers(value);
+    // NOTE we'd normally show an error if of() here returns null
+    final results = await AppConfig.of(context)!.userRepo.searchUsers(value);
 
     setState(() {
       _results = results;
