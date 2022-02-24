@@ -14,12 +14,6 @@ These steps are a continuation of this [lesson](https://github.com/seenickcode/f
 
 4. Bonus: why we need this. See talking points below.
 
-5. Bonus: Benefits of InheritedWidget
-   a. No need for external packages.
-   i. We want to avoid them if we can, as most are not well maintained, not production ready or require updates that can cause breaking changes. Security risk. They change popularity frequently.
-   ii. Most solve simple problems without giving us enough benefit. Junior developers typically add them without thinking about implications.
-   b. Simple to implement. Customizeable (we can inject dependencies).
-
 ### Talking Points
 
 1. Dependency injection is a critical skill when testing Flutter apps.
