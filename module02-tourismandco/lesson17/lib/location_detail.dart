@@ -32,7 +32,8 @@ class _LocationDetailState extends State<LocationDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(location.name, style: Styles.navBarTitle)),
+        appBar: AppBar(
+            title: Text(location.name, style: Styles.navBarTitle)),
         body: Stack(children: [
           _renderBody(context, location),
           _renderFooter(context, location),
@@ -66,7 +67,8 @@ class _LocationDetailState extends State<LocationDetail> {
         padding: EdgeInsets.symmetric(
             vertical: BodyVerticalPadding,
             horizontal: Styles.horizontalPaddingDefault),
-        child: LocationTile(location: this.location, darkTheme: false));
+        child:
+            LocationTile(location: this.location, darkTheme: false));
   }
 
   Widget _renderFooter(BuildContext context, Location location) {
@@ -75,10 +77,12 @@ class _LocationDetailState extends State<LocationDetail> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.white.withOpacity(0.5)),
+            decoration:
+                BoxDecoration(color: Colors.white.withOpacity(0.5)),
             height: FooterHeight,
             child: Container(
-                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+                padding: EdgeInsets.symmetric(
+                    vertical: 20.0, horizontal: 30.0),
                 child: _renderBookButton()),
           )
         ]);
@@ -95,8 +99,8 @@ class _LocationDetailState extends State<LocationDetail> {
 
   Widget _sectionTitle(String text) {
     return Container(
-        padding: EdgeInsets.fromLTRB(Styles.horizontalPaddingDefault, 25.0,
-            Styles.horizontalPaddingDefault, 0.0),
+        padding: EdgeInsets.fromLTRB(Styles.horizontalPaddingDefault,
+            25.0, Styles.horizontalPaddingDefault, 0.0),
         child: Text(text.toUpperCase(),
             textAlign: TextAlign.left, style: Styles.headerLarge));
   }
@@ -123,10 +127,12 @@ class _LocationDetailState extends State<LocationDetail> {
     }
   }
 
-  Widget _renderBookButton() {
-    return FlatButton(
-      color: Styles.accentColor,
-      textColor: Styles.textColorBright,
+  WWidget _renderBookButton() {
+    return TextButton(
+      style: TextButton.styleFrom(
+        foregroundColor: Styles.accentColor,
+        backgroundColor: Styles.textColorBright,
+      ),
       onPressed: _handleBookPress,
       child: Text('Book'.toUpperCase(), style: Styles.textCTAButton),
     );
