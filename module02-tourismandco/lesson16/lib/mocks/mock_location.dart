@@ -18,8 +18,8 @@ mixin MockLocation implements Location {
               text:
                   'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ],
-        tourPackageName: '',
-        userItinerarySummary: ''),
+        tour_package_name: '',
+        user_itinerary_summary: ''),
     Location(
         id: 2,
         name: 'Mount Fuji',
@@ -35,8 +35,8 @@ mixin MockLocation implements Location {
               text:
                   'There are three cities that surround Mount Fuji: Gotemba, Fujiyoshida and Fujinomiya.')
         ],
-        tourPackageName: '',
-        userItinerarySummary: ''),
+        tour_package_name: '',
+        user_itinerary_summary: ''),
     Location(
         id: 3,
         name: 'Kiyomizu-dera',
@@ -51,8 +51,8 @@ mixin MockLocation implements Location {
               title: 'Architectural Style',
               text: 'Japanese Buddhist architecture')
         ],
-        tourPackageName: '',
-        userItinerarySummary: ''),
+        tour_package_name: '',
+        user_itinerary_summary: ''),
     Location(
         id: 4,
         name: 'Kinkaku-ji',
@@ -68,8 +68,8 @@ mixin MockLocation implements Location {
               text:
                   'The Golden Pavilion is set in a magnificent Japanese strolling garden.')
         ],
-        tourPackageName: '',
-        userItinerarySummary: ''),
+        tour_package_name: '',
+        user_itinerary_summary: ''),
     Location(
         id: 5,
         name: 'Odaiba',
@@ -85,8 +85,8 @@ mixin MockLocation implements Location {
               text:
                   'The pedestrian path begins a short walk from Shibaura-futo Station along the Yurikamome on the "Tokyo side" of the bridge, while Odaiba Kaihinkoen Station is the nearest station on the "Odaiba side."')
         ],
-        tourPackageName: '',
-        userItinerarySummary: ''),
+        tour_package_name: '',
+        user_itinerary_summary: ''),
   ];
 
   static Location fetchAny() {
